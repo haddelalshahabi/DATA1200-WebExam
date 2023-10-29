@@ -1,455 +1,458 @@
+/* Resetting default margin to make sure our design looks consistent across browsers */
 body{
-    margin: 0%;
-  }
-  
-  #grid-container{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "nav nav nav"
-                         "header header header"
-                         "main main main"
-                         "footer footer footer";  
-  }
-  
-  .flex_container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1.25rem;
-    background-color: rgb(250, 250, 250);
-    
-  }
- 
-  .flex_container h2 {
-    flex-basis: 100%;
-    margin: 1.4rem;
-  }
+  margin: 0%;
+}
 
-  .contact_flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color:rgb(250, 250, 250);
-    margin: 1.25rem;
-  }
+/* Setting up a grid layout for our main container, which covers the full viewport height */
+#grid-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
 
-  .contact_flex h2{
-    flex-basis: 100%;
-    text-align: center;
-  }
-  
-  .sec1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    padding-top: 30px;
-  }
-  
-  .sec1 p{
-    background-color: white;
-    width: 50%;
-    height: auto;
-  
-    padding: 15px;
-    border-radius: 10px;
-    font-size: large;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color:black;
-    box-shadow: 0px 2px 5px -3px rgba(24, 24, 23, 0.959);
-  }
-  
-  .sec1 a{
-    display: inline-block;
-    background-color: black;
-    text-decoration: none;
-    text-align: center;
-    width: 50%;
-    margin: 30px;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: large;
-    color: white;
-    box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.726);
-  }
+/* A flexible container for our articles or cards */
+.flex_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.25rem;
+  background-color: rgb(250, 250, 250);
+}
 
-  .sec1 a:hover{
-    transform: scale(1.2);
-    background-color:blue;
-  }
-  
-  .sec1 input{
-    width: 50%;
-    margin: 30px;
-    padding: 15px;
-  }
-  
+/* Styling for headers inside our flex container */
+.flex_container h2 {
+  flex-basis: 100%;
+  margin: 1.4rem;
+}
+
+/* A flexible container specifically for the contact section */
+.contact_flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(250, 250, 250);
+  margin: 1.25rem;
+}
+
+/* Styling for headers inside our contact flex container */
+.contact_flex h2{
+  flex-basis: 100%;
+  text-align: center;
+}
+
+/* Styling for each section inside our contact flex container */
+.sec1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 30px;
+}
+
+/* Styling for paragraphs inside our contact sections */
+.sec1 p{
+  background-color: white;
+  width: 50%;
+  height: auto;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  box-shadow: 0px 2px 5px -3px rgba(24, 24, 23, 0.959);
+}
+
+/* Styling for links inside our contact sections */
+.sec1 a{
+  display: inline-block;
+  background-color: black;
+  text-decoration: none;
+  text-align: center;
+  width: 50%;
+  margin: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: large;
+  color: white;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.726);
+}
+
+/* Adding a hover effect to links in our contact sections */
+.sec1 a:hover{
+  transform: scale(1.2);
+  background-color: blue;
+}
+
+/* Styling for input fields in our contact sections */
+.sec1 input{
+  width: 50%;
+  margin: 30px;
+  padding: 15px;
+}
+
+/* Styling for each card in our flex container */
+.cart{
+  color: black;
+  width: 30%;
+  min-height: 350px;
+  padding: 15px;
+  margin: 8px;
+  background-color: white;
+  box-shadow: 0.5px 5px 5px -3px black;
+  border-radius: 1rem;
+}
+
+/* Styling for figures inside our cards */
+.cart figure{
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for images inside our card figures */
+.cart figure img{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0.5px 5px 7px -3px black;
+}
+
+/* General styling for buttons */
+.button{
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 15px -3px rgb(179, 179, 211);
+  margin-top: 15px;
+}
+
+/* Adding a hover effect to buttons */
+.button:hover{
+  background-color: blue;
+  transform: scale(1.2);
+}
+
+/* Styling for the header section */
+header{
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  background: url(../Images/home_header.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+}
+
+/* Styling for the navigation bar */
+nav{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  grid-area: nav;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Styling for the list in the navigation bar */
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* Removing default list style and adding spacing for list items in the navigation bar */
+nav ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+/* Styling for links in the navigation bar */
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+/* Adding a hover effect to links in the navigation bar */
+nav ul li a:hover{
+  color: blue;
+}
+
+/* Styling for the figure (logo) in the navigation bar */
+nav figure{
+  margin: 10px;
+}
+
+/* Styling for the logo image */
+#logo{
+  width: 150px;
+  height: 100%;
+  border: black;
+  object-fit: cover;
+}
+
+/* Special styling for the "contact us" link in the navigation bar */
+#contact_us{
+  background-color: #312c2c;
+  color: rgba(255, 255, 255, 0.986);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Styling for the header text */
+#headerText{
+  background-color: rgba(255, 255, 255, 0.876);
+  max-width: 55%;
+  margin-left: 30px;
+  margin-top: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  line-height: 2.0;
+}
+
+/* Assigning the main content to the "main" grid area */
+main{
+  grid-area: main;
+  background-color: white;
+}
+
+/* Styling for the footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  grid-area: footer;
+}
+
+/* Styling for links in the footer */
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Adding a hover effect to links in the footer */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for headers in the footer */
+footer h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Adding spacing between sections in the footer */
+.contact-info, .social-media, .copyright {
+  margin-bottom: 20px;
+}
+
+/* Adding spacing beside the icons in the footer */
+.fa-envelope, .fa-facebook, .fa-instagram {
+  margin-right: 5px;
+}
+
+/* Styling for h2 headers (used for consistent styling across the site) */
+#h2id{
+  text-align: center;
+}
+
+/* Styling for the mobile menu button */
+.menu_button{
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+/* Styling for the lines in the mobile menu button */
+.menu_button .links{
+  height: 3px;
+  width: 100%;
+  background-color: blue;
+  border-radius: 3px;
+}
+
+/* Media queries for responsive design */
+
+/* Adjusting styles for screens smaller than 1418px */
+@media only screen and (max-width: 1418px) {
   .cart{
-        color: black;
-        width: 30%;
-        min-height: 350px;
-        padding: 15px;
-        margin: 8px;
-        background-color:white;
-        box-shadow: 0.5px 5px 5px -3px black;
-        border-radius: 1rem;
-    }
-  
-  .cart figure{
-    margin: 0;
-    width: 100%;
-    height: auto;
-  }
-  
-  .cart figure img{
-        width: 100%;
-        height: 250px;
-        border-radius: 10px;
-        box-shadow: 0.5px 5px 7px -3px black;
-    }
-
-  .button{
-    display: inline-block;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 10px 15px -3px rgb(179, 179, 211);
-    margin-top: 15px;
-  }
-  
-  .button:hover{
-    background-color: blue;
-    transform: scale(1.2);
+    width: 46%;
   }
 
   header{
+    height: 70vh;
+  }
+
+  #grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "nav nav"
+      "header header"
+      "main main"
+      "footer footer";
+  }
+}
+
+/* Adjusting styles for screens smaller than 1187px */
+@media only screen and (max-width: 1187px) {
+  .cart{
+    width: 45%;
+  }
+}
+
+/* Adjusting styles for screens smaller than 959px */
+@media only screen and (max-width: 959px) {
+  .cart{
+    width: 42%;
+  }
+
+  #headerText{
+    max-width: 80%;
+  }
+
+  header{
+    height: 50vh;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}
+
+/* Adjusting styles for screens smaller than 700px */
+@media only screen and (max-width: 700px) {
+  .menu_button{
     display: flex;
-    flex-direction: column;
-  
-    grid-area: header;
-    background: url(../Images/home_header.jpg);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+  }
+
+  .myLinks{
+    display: none;
     width: 100%;
-    height: 90vh;
   }
 
   nav{
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    grid-area: nav;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav ul li{
-    list-style: none;
-    display: inline-block;
+  .myLinks ul{
+    flex-direction: column;
+    width: 100%;
   }
 
-  nav ul li a{
-    text-decoration:none;
-    color: black;
-    padding: 20px;
-  }
-    
-  nav ul li a:hover{
-    color: blue;
-  }
-  
-  nav figure{
-    margin: 10px;
-  }
-  
-  #logo{
-    width: 150px;
-    height: 100%;
-    border: black;
-    object-fit: cover; 
-  }
-  
-  #contact_us{
-    background-color: #312c2c;
-    color: rgba(255, 255, 255, 0.986);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  #headerText{
-    background-color: rgba(255, 255, 255, 0.876);
-    max-width: 55%;
-    margin-left: 30px;
-    margin-top: 100px;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: large;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color:black;
-    line-height: 2.0;
-  }
-
-  main{
-    grid-area: main;
-    background-color: white;
-  }
-  
-  footer {
-    background-color: white; /* Bakgrunnsfarge som matcher header */
-    color: black;
-    padding: 20px 0;
+  .myLinks ul li{
     text-align: center;
-    grid-area: footer;
+    padding: 20px;
+    margin: 8px;
+    background-color: rgb(241, 241, 241);
   }
-  
-  footer a {
-    color: black; /* Lenkefarge */
-    text-decoration: none;
+
+  .myLinks ul li a{
+    padding: .5rem 1rem;
   }
-  
-  footer a:hover {
-    text-decoration: underline;
+
+  .myLinks.active {
+    display: flex;
   }
-  
-  footer h3 {
-    font-size: 1.2em;
+
+  header{
+    height: auto;
+  }
+}
+
+/* Adjusting styles for screens smaller than 650px */
+@media only screen and (max-width: 650px) {
+  .cart{
+    width: 100%;
+  }
+
+  #headerText{
+    max-width: 70%;
+  }
+
+  .sec1 p, .sec1 a, .sec1 input{
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .contact-info, .social-media, .copyright {
+    display: block;
+    width: 100%;
     margin-bottom: 10px;
   }
-  
-  .contact-info, .social-media, .copyright {
-    margin-bottom: 20px;
+
+  #grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "nav"
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+/* Adjusting styles for screens smaller than 510px */
+@media only screen and (max-width: 510px){
+  #headerText{
+    width: 90%;
   }
 
-  .fa-envelope, .fa-facebook, .fa-instagram {
-    margin-right: 5px;
+  footer {
+    padding: 20px 5px;
   }
-    
-  #h2id{
-    text-align: center;
-  }
-  
-  .menu_button{
-    position: absolute;
-    top: 2rem;
-    right: 0.5rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .menu_button .links{
-    height: 3px;
-    width: 100%;
-    background-color: blue;
-    border-radius: 3px;
-  }
-  
-  @media only screen and (max-width: 1418px) {
-  
-    .cart{
-        width: 46%;
-    }
-  
-    header{
-        height: 70vh;
-    }
-  
-    #grid-container{
-        height: 100vh;
-        display: grid;
-        grid-template-columns:  1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "nav nav"
-                             "header header"
-                             "main main"
-                             "footer footer";
-        
-    
-    }
-  }
-  
-  
-  
-  @media only screen and (max-width: 1187px) {
-  
-    .cart{
-  
-        width: 45%;
-  
-  
-    }
-  }
-  
-  @media only screen and (max-width: 959px) {
-  
-    .cart{
-  
-        width: 42%;
-  
-  
-    }
-  
-    #headerText{
-        
-        max-width: 80%;
-        
-    }
-  
-    header{
-        height: 50vh;
-    }
-  
-    footer {
-      padding: 20px 10px;
-    }
-  }
+}
 
-  @media only screen and (max-width: 700px) {
-    .menu_button{
-        display: flex;
-        top: 2rem;
-    }
-  
-    .myLinks{
-        display: none;
-        width: 100%;
-        
-    }
-  
-    nav{
-        flex-direction: column;
-        align-items:flex-start;
-    }
-   
-    .myLinks ul{
-        
-        flex-direction: column;
-        width: 100%;
-    }
-  
-    .myLinks ul li{
-        text-align: center;
-        padding: 20px;
-        margin: 8px;
-        background-color: rgb(241, 241, 241);
-  
-    }
-  
-  
-    .myLinks ul li a{
-        padding: .5rem 1rem;
-    }
-  
-  
-    .myLinks.active {
-        display: flex;
-    }
-    header{
-        height: auto;
-    }
-  }
-  
-  
-  
-  
-  @media only screen and (max-width: 650px) {
-  
-    .cart{
-  
-        width: 100%;
-  
-  
-    }
-  
-    #headerText{
-        
-        max-width: 70%;
-        
-    }
-  
-    .sec1 p{
-        width: 100%;
-    }
-  
-    .sec1 a{
-        width: 100%;
-    }
-  
-    .sec1 input{
-        width: 100%;
-    }
+/* Ensuring smooth scrolling for anchor links */
+html{
+  scroll-behavior: smooth;
+}
 
-    footer {
-      padding: 20px 10px;
-      text-align: center;
-    }
-  
-    .contact-info, .social-media, .copyright {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    #grid-container{
-  
-  
-        height: 100vh;
-        display: grid;
-        grid-template-columns:1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "nav"
-                             "header"
-                             "main"
-                             "footer";
-    }  
-  }
-  
-  @media only screen and (max-width: 510px){
-    
-    #headerText{
-        width: 90%;
-    }
-
-    footer {
-      padding: 20px 5px;
-    }
-  }
-  
-  
-  
-  html{
-    scroll-behavior: smooth;
-  }
-  
-  .MovePageUp{
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: black;
-    bottom: 20px;
-    right: 10px;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    color: white;
-    font-size: 22px;
-  
-  }  
+/* Styling for the "move page up" button */
+.MovePageUp{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: black;
+  bottom: 20px;
+  right: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
