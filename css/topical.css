@@ -214,14 +214,16 @@ main {
 
 
 main {
-  overflow: hidden;
+  overflow-y: auto; /* Makes the webpage scrollable if content is too tall */
   grid-area: main;
   padding: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #ffffff; /* Plain white background */
+  min-height: 100vh;
+  background-color: #ffffff;
+  background: linear-gradient(45deg, #f5f5f5, #e1e1e1);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
 }
 main {
   background: linear-gradient(45deg, #f5f5f5, #e1e1e1);
@@ -231,13 +233,13 @@ main {
 
 @keyframes gradientBackground {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -245,27 +247,28 @@ main {
 .centered-box {
   background-color: #ffffff;
   padding: 50px;
+  margin: 20px;
   box-shadow: 0.5px 5px 5px -3px black;
   border-radius: 20px;
   text-align: left;
-  max-width: 90%;
+  max-width: 95%; /* Adjusted for wider content */
   width: 700px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: transform 1s, opacity 1s;
 }
 
 @media only screen and (max-width: 768px) {
   .centered-box {
-      width: 100%;
-      padding: 20px;
+    width: 100%;
+    padding: 20px;
   }
 }
 
-.centered-box:hover {
-  transform: scale(1.05); /* Scale up on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+@media only screen and (min-width: 1200px) {
+  .centered-box {
+    max-width: 1100px; /* Or whatever width you deem appropriate */
+    margin: 20px auto; /* Horizontal centering with auto margins */
+  }
 }
+
 
 .centered-box h1 {
   font-size: 2.5rem;
@@ -280,19 +283,25 @@ main {
   color: #34495e; /* Dark grey-blue */
 }
 
+.centered-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* For smaller screens */
 @media (max-width: 768px) {
   main {
   overflow: hidden;
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .centered-box {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .centered-box h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -362,7 +371,7 @@ footer h3 {
 @media only screen and (max-width: 1418px) {
 
   .cart{
-      width: 46%;
+    width: 46%;
   }
 
   
@@ -381,30 +390,21 @@ footer h3 {
 }
 
 
-
 @media only screen and (max-width: 1187px) {
 
   .cart{
-
-      width: 45%;
-
-
+    width: 45%;
   }
 }
 
 @media only screen and (max-width: 959px) {
 
   .cart{
-
-      width: 42%;
-
-
+    width: 42%;
   }
 
   #headerText{
-      
-      max-width: 80%;
-      
+    max-width: 80%; 
   }
 
   
@@ -416,79 +416,76 @@ footer h3 {
 
 @media only screen and (max-width: 700px) {
   .menu_button{
-      display: flex;
-      top: 2rem;
+    display: flex;
+    top: 2rem;
   }
 
   .myLinks{
-      display: none;
-      width: 100%;
+    display: none;
+    width: 100%;
       
   }
 
   nav {
   overflow: hidden;
-      flex-direction: column;
-      align-items:flex-start;
+    flex-direction: column;
+    align-items:flex-start;
   }
  
-  .myLinks ul{
-      
-      flex-direction: column;
-      width: 100%;
+  .myLinks ul{  
+    flex-direction: column;
+    width: 100%;
   }
 
   .myLinks ul li{
-      text-align: center;
-      padding: 20px;
-      margin: 8px;
-      background-color: rgb(241, 241, 241);
-
+    text-align: center;
+    padding: 20px;
+    margin: 8px;
+    background-color: rgb(241, 241, 241);
   }
 
 
   .myLinks ul li a{
-      padding: .5rem 1rem;
+    padding: .5rem 1rem;
   }
 
 
   .myLinks.active {
-      display: flex;
+    display: flex;
   }
+
   header {
   overflow: hidden;
-      height: auto;
+    height: auto;
   }
 }
-
-
 
 
 @media only screen and (max-width: 650px) {
 
   .cart{
 
-      width: 100%;
+    width: 100%;
 
 
   }
 
   #headerText{
       
-      max-width: 70%;
+    max-width: 70%;
       
   }
 
   .sec1 p{
-      width: 100%;
+    width: 100%;
   }
 
   .sec1 a{
-      width: 100%;
+    width: 100%;
   }
 
   .sec1 input{
-      width: 100%;
+    width: 100%;
   }
 
   footer {
@@ -518,7 +515,7 @@ footer h3 {
 @media only screen and (max-width: 510px){
   
   #headerText{
-      width: 90%;
+    width: 90%;
   }
 
   footer {
