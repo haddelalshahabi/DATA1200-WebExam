@@ -88,30 +88,6 @@ body{
   padding: 15px;
 }
 
-.cart{
-    color: black;
-    width: 30%;
-    min-height: 350px;
-    padding: 15px;
-    margin: 8px;
-    background-color:white;
-    box-shadow: 0.5px 5px 5px -3px black;
-    border-radius: 1rem;
-  }
-
-.cart figure{
-  margin: 0;
-  width: 100%;
-  height: auto;
-}
-
-.cart figure img{
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    box-shadow: 0.5px 5px 7px -3px black;
-  }
-
 .button{
   display: inline-block;
   background-color: black;
@@ -212,98 +188,134 @@ main {
   background-color: white;
 }
 
-
 main {
-  overflow-y: auto; /* Makes the webpage scrollable if content is too tall */
+  overflow: hidden;
+  overflow-y: auto;
   grid-area: main;
   padding: 2rem;
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background-color: #ffffff;
   background: linear-gradient(45deg, #f5f5f5, #e1e1e1);
   background-size: 400% 400%;
   animation: gradientBackground 15s ease infinite;
 }
+
 main {
-  background: linear-gradient(45deg, #f5f5f5, #e1e1e1);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  background: linear-gradient(rgb(102, 100, 100), rgb(180, 180, 116));
 }
 
 @keyframes gradientBackground {
   0% {
-    background-position: 0% 50%;
+      background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+      background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+      background-position: 0% 50%;
   }
 }
 
-/* Centered Card */
 .centered-box {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
   background-color: #ffffff;
-  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 2px 10px 10px -3px rgba(0, 0, 0, 0.9);
+  width: 80%;
+  max-width: 1200px;
   margin: 20px;
-  box-shadow: 0.5px 5px 5px -3px black;
-  border-radius: 20px;
-  text-align: left;
-  max-width: 95%; /* Adjusted for wider content */
-  width: 700px;
 }
 
+.centered-box h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.centered-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.image-one {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.img-text-wrapper {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.right-text {
+  flex-grow: 1;
+  max-width: 60%;
+  margin-left: 20px;
+}
+
+.image-two {
+  width: 50%;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  margin-top: 50px; /* adjust this value as needed to move the image down */
+}
+
+
 @media only screen and (max-width: 768px) {
+  main {
+      padding: 1rem;
+  }
+
   .centered-box {
-    width: 100%;
-    padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .centered-box img {
+      width: 70%;
+      margin-bottom: 20px;
+  }
+
+  .centered-box div {
+      max-width: 100%;
+  }
+
+  .centered-box h1 {
+      font-size: 2rem;
+  }
+
+  .img-text-wrapper {
+      flex-direction: column;
+  }
+
+  .right-text {
+      margin-left: 0;
+      max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .centered-box {
-    max-width: 1100px; /* Or whatever width you deem appropriate */
-    margin: 20px auto; /* Horizontal centering with auto margins */
+      max-width: 1100px;
+      margin: 20px auto;
   }
 }
 
-
-.centered-box h1 {
-  font-size: 2.5rem;
-  color: #2c3e50; /* Dark blue-ish */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
-}
-
-.centered-box p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #34495e; /* Dark grey-blue */
-}
-
-.centered-box img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* For smaller screens */
-@media (max-width: 768px) {
-  main {
-  overflow: hidden;
-    padding: 1rem;
-  }
-
-  .centered-box {
-    padding: 1rem;
-  }
-
-  .centered-box h1 {
-    font-size: 2rem;
-  }
-}
 
 #grid-container{
   display: grid;
