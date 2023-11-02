@@ -254,13 +254,13 @@ main {
 .img-text-wrapper {
   display: flex;
   align-items: start;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .right-text {
   flex-grow: 1;
   max-width: 60%;
-  margin-left: 20px;
+  margin-left: 1rem;;
 }
 
 .image-two {
@@ -273,46 +273,70 @@ main {
   margin-top: 50px; /* adjust this value as needed to move the image down */
 }
 
+@media only screen and (max-width: 992px) {
+  .centered-box {
+    width: 90%;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   main {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .centered-box {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
   }
 
-  .centered-box img {
-      width: 70%;
-      margin-bottom: 20px;
+  .image-one {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .image-two {
+    width: 70%;
+    margin-bottom: 20px;
   }
 
   .centered-box div {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .centered-box h1 {
-      font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .img-text-wrapper {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .right-text {
-      margin-left: 0;
-      max-width: 100%;
+    margin-left: 0;
+    max-width: 100%;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .centered-box {
+    padding: 1rem; 
+  }
+
+  .image-one {
+    width: 100%; 
+  }
+  .image-two {
+    width: 100%; 
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
   .centered-box {
-      max-width: 1100px;
-      margin: 20px auto;
+    max-width: 1100px;
+    margin: 20px auto;
   }
 }
 
