@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Favicon for the website -->
-    <link rel="shortcut icon" href="../Images/sidenstitle.jpg" type="image/x-icon">
-    <link rel="icon" href="../Images/sidenstitle.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../Images/page-icon.png" type="image/x-icon">
+    <link rel="icon" href="../Images/page-icon.png" type="image/x-icon">
     
     <!-- Another version of Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -36,42 +36,41 @@
 <body>
     <!-- Container for the entire grid layout -->
     <div id="grid-container">
-        
-        <!-- Navigation bar -->
-        <nav>
-            <!-- Logo of the website -->
-            <figure>
+        <!-- Header of the website -->
+        <header>
+            <!-- Navigation bar -->
+              <nav>
+                <!-- Logo of the website -->
                 <a href="index.html">
                     <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
                 </a>
-            </figure>
             
-            <!-- Mobile menu button -->
-            <a href="#" class="menu_button" aria-label="Click this button">
-                <span class="links"></span>
-                <span class="links"></span>
-                <span class="links"></span>
-            </a>
-            
-            <!-- Links for navigation -->
-            <div class="myLinks">
-                <ul>
-                    <li><a class="active" href="index.html">Hjem</a></li>
-                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                    <li><a href="topical.html">Aktuelt</a></li>
-                    <li><a href="location1.html">Steder</a></li>
-                    <li><a id="contact_us" href="contact_us.html">Kontakt oss</a></li>
-                </ul>
-            </div>
-            
-            <!-- Button to scroll to the top of the page -->
-            <a class="MovePageUp" href="#" aria-label="Move Page Up">
-                <i class="fa fa-arrow-circle-up"></i>
-            </a>
-        </nav>
+                
+                <!-- Mobile menu button -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label for="menu-toggle" class="menu_button" aria-label="Open the menu">
+                    <span class="links"></span>
+                    <span class="links"></span>
+                    <span class="links"></span>
+                </label>
+                
+                <!-- Links for navigation -->
+                <div class="myLinks">
+                    <ul>
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                        <li><a href="topical.html">Aktuelt</a></li>
+                        <li><a href="location1.html">Steder</a></li>
+                        <li><a id="contact_us" href="contact_us.html">Kontakt oss</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Button to scroll to the top of the page -->
+                <a class="MovePageUp" href="#" aria-label="Move Page Up">
+                    <i class="fa fa-arrow-circle-up"></i>
+                </a>
+            </nav>
 
-        <!-- Header of the website -->
-        <header>
             <div id="headerText">
                 <!-- Main heading -->
                 <h1>OsloMet Campus - Pilestredet 35</h1>
@@ -80,6 +79,7 @@
                 <p>Pilestredet 35 er et pulserende punkt på OsloMet, midt i Oslo sentrum. Dette moderne bygget rommer et mangfold av studieprogrammer, og er et sted for læring, kreativitet og studentengasjement. Her finner du toppmoderne fasiliteter, livlige studieområder og en inkluderende atmosfære. Vi er dedikert til tilgjengelighet og bærekraft, og ønsker alle velkommen til å bli en del av vårt inspirerende fellesskap. Bli med oss og utforsk alt som OsloMet har å tilby!</p>
             </div>
         </header>
+    
 
         <!-- Main content of the page -->
         <main>
@@ -87,9 +87,9 @@
             <section class="flex_container">
                 
                 <!-- First article -->
-                <article class="cart">
+                <article class="card">
                     <figure>
-                        <img src="../Images/home_accessibility.jpg" alt="Image from Pixabay">
+                        <img src="../Images/home-accessibility.jpg" alt="Image from Pixabay">
                     </figure>
                     <h3>Tilgjengelighet</h3>
                     <p>På OsloMet tar vi tilgjengelighet på alvor. Vi jobber kontinuerlig for å sikre at våre fasiliteter, tjenester og digitale ressurser er tilgjengelige for alle. Gjennom omfattende testing og tilbakemeldinger fra vårt samfunn, streber vi etter å skape et inkluderende miljø der alle føler seg velkomne og støttede</p>
@@ -97,9 +97,9 @@
                 </article>
                 
                 <!-- Second article -->
-                <article class="cart">
+                <article class="card">
                     <figure>
-                        <img src="../Images/home_topical.jpg" alt="Image from Pixabay">
+                        <img src="../Images/home-topical.jpg" alt="Image from Pixabay">
                     </figure>
                     <h3>Aktuelt</h3>
                     <p>Oppdag de siste nyhetene og hendelsene ved OsloMet og vårt pulserende campus på Pilestredet 35. Fra banebrytende forskning og studentaktiviteter til kommende arrangementer og samfunnsengasjement, er det alltid noe som skjer her. Vi inviterer deg til å utforske, delta og bli en del av vårt aktive og inkluderende fellesskap.</p>
@@ -107,9 +107,9 @@
                 </article>
                 
                 <!-- Third article -->
-                <article class="cart">
+                <article class="card">
                     <figure>
-                        <img src="../Images/home_location.jpg" alt="Image from Pixabay">
+                        <img src="../Images/home-location.jpg" alt="Image from Pixabay">
                     </figure>
                     <h3>Steder</h3>
                     <p>Her kan du finne et rolig sted å studere, tilgang til en omfattende samling av bøker og tidsskrifter, og hjelp fra våre kunnskapsrike bibliotekarer. Vi er her for å hjelpe deg med å finne informasjonen du trenger og for å sikre at du har de beste forholdene for å lykkes i dine studier.</p>
@@ -143,7 +143,7 @@
             <section class="copyright">
               <p>&copy; 2023 OsloMet - Storbyuniversitetet. Alle rettigheter forbeholdt.</p>
             </section>
-          </footer>                  
+        </footer>                  
     </div>
 </body>
 </html>
