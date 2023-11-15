@@ -4,49 +4,48 @@
 <!-- Starting the HTML document and setting the language to Norwegian -->
 <html lang="no">
 
-<!-- Head section of the document -->
+<!-- Head section: Contains metadata, links to stylesheets, and other resources -->
 <head>
-    <!-- Specifying the character set for the document -->
+    <!-- Character set declaration for universal text compatibility -->
     <meta charset="UTF-8">
     
-    <!-- Ensuring proper rendering and touch zooming -->
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Title of the web page -->
-    <title>Hjemme side</title>
+    <!-- Title: Defines the title of the web page shown in the browser tab -->
+    <title>Home page</title>
     
-    <!-- Description of the web page -->
-    <meta name="description" content="Hjemme side">
+    <!-- Meta description: Brief description of the page for search engines and social media -->
+    <meta name="description" content="Home page">
     
-    <!-- Linking to external CSS file -->
+    <!-- External CSS: Link to the main stylesheet for styling the webpage -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     
-    <!-- Including Font Awesome for icons -->
+    <!-- Font Awesome: Provides icons for UI enhancement -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <!-- Favicon for the website -->
+    <!-- Favicon: Small icon associated with the site, displayed in the browser tab -->
     <link rel="shortcut icon" href="../Images/page-icon.png" type="image/x-icon">
     <link rel="icon" href="../Images/page-icon.png" type="image/x-icon">
     
-    <!-- Another version of Font Awesome -->
+    <!-- Additional version of Font Awesome for extended icon options -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<!-- Body section of the document -->
+<!-- Body: Contains the content of the web page -->
 <body>
-    <!-- Container for the entire grid layout -->
+    <!-- Grid container: Main layout structure for the entire page -->
     <div id="grid-container">
-        <!-- Header of the website -->
+        <!-- Header: Top section of the webpage, includes navigation and branding -->
         <header>
-            <!-- Navigation bar -->
-              <nav>
-                <!-- Logo of the website -->
+            <!-- Navigation bar: Contains links to other pages and interactive elements -->
+            <nav>
+                <!-- Logo: Represents the brand identity; links back to the homepage -->
                 <a href="index.html">
                     <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
                 </a>
-            
-                
-                <!-- Mobile menu button -->
+
+                <!-- Mobile menu toggle: Checkbox hack for a responsive menu button -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle" />
                 <label for="menu-toggle" class="menu-button" aria-label="Open the menu">
                     <span class="links"></span>
@@ -54,47 +53,48 @@
                     <span class="links"></span>
                 </label>
                 
-                <!-- Links for navigation -->
+                <!-- Navigation links: List of links for site navigation -->
                 <div class="my-links">
                     <ul>
-                        <li><a href="index.html">Hjem</a></li>
-                        <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                        <li><a href="topical.html">Aktuelt</a></li>
-                        <li><a href="location.html">Steder</a></li>
-                        <li><a id="contact-us" href="contact-us.html">Kontakt oss</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="topical.html">Topical</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
                     </ul>
                 </div>
                 
-                <!-- Button to scroll to the top of the page -->
-                <a class="move-page-up" href="#" aria-label="Move Page Up">
+                 <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
+                 <a class="move-page-up" href="#" aria-label="Move Page Up">
                     <i class="fa fa-arrow-circle-up"></i>
                 </a>
             </nav>
 
+            <!-- Header text: Main heading and introduction for the page -->
             <div id="header-text">
                 <!-- Main heading -->
                 <h1>OsloMet Campus - Pilestredet 35</h1>
                 
                 <!-- Brief description about the campus -->
-                <p>Pilestredet 35 er et pulserende punkt på OsloMet, midt i Oslo sentrum. Dette moderne bygget rommer et mangfold av studieprogrammer, og er et sted for læring, kreativitet og studentengasjement. Her finner du toppmoderne fasiliteter, livlige studieområder og en inkluderende atmosfære. Vi er dedikert til tilgjengelighet og bærekraft, og ønsker alle velkommen til å bli en del av vårt inspirerende fellesskap. Bli med oss og utforsk alt som OsloMet har å tilby!</p>
+                <p>Pilestredet 35 is a vibrant spot at OsloMet, right in the heart of Oslo city center. This modern building houses a variety of study programs and is a place for learning, creativity, and student engagement. Here, you'll find state-of-the-art facilities, lively study areas, and an inclusive atmosphere. We are dedicated to accessibility and sustainability and welcome everyone to become part of our inspiring community. Join us and explore all that OsloMet has to offer!</p>
             </div>
         </header>
-    
 
-        <!-- Main content of the page -->
+        <!-- Main content: Primary content area of the webpage -->
         <main>
-            <!-- Section for articles with a flexible container -->
+            <!-- Articles section: Flexible container for news or blog articles -->
             <section class="flex-container">
                 
-                <!-- First article -->
+                <!-- Article: Individual content block with image, heading, and text -->
                 <article class="card">
                     <figure>
-                        <!--Bildet kommentar-->
+                        <!-- Image sourced from Eurosign's project page for OsloMet; specific photographer or company details not provided. See more at https://www.eurosign.no/prosjekter/oslomet -->
                         <img src="../Images/home-accessibility.jpg" alt="Image from Pixabay">
                     </figure>
-                    <h3>Tilgjengelighet</h3>
-                    <p>På OsloMet tar vi tilgjengelighet på alvor. Vi jobber kontinuerlig for å sikre at våre fasiliteter, tjenester og digitale ressurser er tilgjengelige for alle. Gjennom omfattende testing og tilbakemeldinger fra vårt samfunn, streber vi etter å skape et inkluderende miljø der alle føler seg velkomne og støttede</p>
-                    <a href="html/accessibility.html" class="button">Les mer</a>
+                    <h3>Accessibility</h3>
+                    <p>Discover how OsloMet champions accessibility! Our dedicated page provides a snapshot of our ongoing efforts to ensure our campus and digital presence can be navigated by everyone. Click 'Read more' to learn about our commitment to inclusive design and the measures we've implemented to create an environment that welcomes all.</p>
+                    <a href="accessibility.html" class="button">Read more</a>
+
                 </article>
                 
                 <!-- Second article -->
@@ -103,50 +103,50 @@
                         <!--Bildet kommentar-->
                         <img src="../Images/home-topical.jpg" alt="Image from Pixabay">
                     </figure>
-                    <h3>Aktuelt</h3>
-                    <p>Oppdag de siste nyhetene og hendelsene ved OsloMet og vårt pulserende campus på Pilestredet 35. Fra banebrytende forskning og studentaktiviteter til kommende arrangementer og samfunnsengasjement, er det alltid noe som skjer her. Vi inviterer deg til å utforske, delta og bli en del av vårt aktive og inkluderende fellesskap.</p>
-                    <a href="html/topical.html" class="button">Les mer</a>
+                    <h3>Topical</h3>
+                    <p>Delve into 'The Interplay Between Technology and Society' at our university library. Explore how mobile phones transcend being mere technical devices to becoming integral social tools that reflect our values and reshape our daily routines. Engage with discussions on the benefits and challenges of technological integration in our lives, from student discounts to remote learning's impact. Click 'Read more' to uncover insights on how technology is intertwined with academic and social changes, and share your perspective on its role in shaping our community.</p>
+                    <a href="topical.html" class="button">Read more</a>
                 </article>
                 
                 <!-- Third article -->
                 <article class="card">
                     <figure>
-                        <!--Bildet kommentar-->
+                        <!-- Image sourced from Eurosign's project page for OsloMet; specific photographer or company details not provided. See more at https://www.eurosign.no/prosjekter/oslomet -->
                         <img src="../Images/home-location.jpg" alt="Image from Pixabay">
                     </figure>
-                    <h3>Steder</h3>
-                    <p>Her kan du finne et rolig sted å studere, tilgang til en omfattende samling av bøker og tidsskrifter, og hjelp fra våre kunnskapsrike bibliotekarer. Vi er her for å hjelpe deg med å finne informasjonen du trenger og for å sikre at du har de beste forholdene for å lykkes i dine studier.</p>
-                    <a href="html/location.html" class="button">Les mer</a>
+                    <h3>Location</h3>
+                    <p>Explore the heartbeat of OsloMet – our central campus at Pilestredet 35! Dive into the vibrant map to discover the array of facilities, from the bustling cafeteria to the well-stocked library. Each spot on the map tells a story of innovation, learning, and community. Click 'Read more' to navigate the spaces that make our university a dynamic place to study, meet, and grow.</p>
+                    <a href="location.html" class="button">Read more </a>
                 </article>
             </section>
             
-            <!-- Contact section -->
+            <!-- Contact section: Dedicated area for contact information -->
             <section class="contact_flex">
                 <div class="sec1">
-                    <a href="html/contact-us.html">Kontakt oss</a>
+                    <a href="contact-us.html">Contact us</a>
                 </div>
             </section>
         </main>
         
-        <!-- Footer of the website -->
+        <!-- Footer: Contains additional information, links, and credits -->
         <footer>
-            <!-- Section for contact information -->
+            <!-- Contact information: Displays various ways to contact the organization -->
             <section class="contact-info">
-              <h3>Kontaktinformasjon</h3>
-              <p>E-post: <a href="mailto:info@oslomet.no"><i class="fa-solid fa-envelope"></i> info@oslomet.no</a></p>
+              <h3>Contact Information</h3>
+              <p>Email:<a href="mailto:info@oslomet.no"><i class="fa-solid fa-envelope"></i> info@oslomet.no</a></p>
             </section>
           
-            <!-- Section for social media links -->
+            <!-- Social media links: Encourages users to follow the organization on social platforms -->
             <section class="social-media">
-              <h3>Følg Oss</h3>
-              <p>Følg oss på sosiale medier for å holde deg oppdatert: <a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>, <a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>.</p>
+              <h3>Follow Us</h3>
+              <p>Follow us on social media to stay updated: <a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>, <a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>.</p>
             </section>
           
-            <!-- Copyright section -->
+            <!-- Copyright: Legal statement regarding the ownership of the website's content -->
             <section class="copyright">
-              <p>&copy; 2023 OsloMet - Storbyuniversitetet. Alle rettigheter forbeholdt.</p>
+              <p>&copy; 2023 OsloMet - Storbyuniversitetet. All rights reserved.</p>
             </section>
-        </footer>                  
+        </footer>      
     </div>
 </body>
 </html>
