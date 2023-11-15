@@ -1,116 +1,32 @@
+/* Resetting default margin to make sure our design looks consistent across browsers */
 body{
   margin: 0%;
 }
 
+/* Ensuring smooth scrolling for anchor links */
+html{
+  scroll-behavior: smooth;
+}
+
+/* Setting up a grid layout for our main container, which covers the full viewport height */
 #grid-container{
+  height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto auto 1fr auto;
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 
-.flex_container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1.25rem;
-  background-color: rgb(250, 250, 250);
-  
-}
-
-.flex_container h2 {
-  flex-basis: 100%;
-  margin: 1.4rem;
-}
-
-.contact_flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color:rgb(250, 250, 250);
-  margin: 1.25rem;
-}
-
-.contact_flex h2{
-  flex-basis: 100%;
-  text-align: center;
-}
-
-.sec1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 50%;
-  padding-top: 30px;
-}
-
-.sec1 p{
-  background-color: white;
-  width: 50%;
-  height: auto;
-
-  padding: 15px;
-  border-radius: 10px;
-  font-size: large;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  color:black;
-  box-shadow: 0px 2px 5px -3px rgba(24, 24, 23, 0.959);
-}
-
-.sec1 a{
-  display: inline-block;
-  background-color: black;
-  text-decoration: none;
-  text-align: center;
-  width: 50%;
-  margin: 30px;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: large;
-  color: white;
-  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.726);
-}
-
-.sec1 a:hover{
-  transform: scale(1.2);
-  background-color:blue;
-}
-
-.sec1 input{
-  width: 50%;
-  margin: 30px;
-  padding: 15px;
-}
-
-.button{
-  display: inline-block;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  box-shadow: 0px 10px 15px -3px rgb(179, 179, 211);
-  margin-top: 15px;
-}
-
-.button:hover{
-  background-color: blue;
-  transform: scale(1.2);
-}
-
-header {
-  overflow: hidden;
+/* Styling for the header section */
+header{
   display: flex;
   flex-direction: column;
-
   grid-area: header;
-  background: url(../Images/home_header.jpg);
+  background: url(../Images/home-header.jpg); /* bildet komentar */
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -118,59 +34,8 @@ header {
   height: 90vh;
 }
 
-
-nav {
-  overflow: hidden;
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  grid-area: nav;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-}
-
-nav ul li{
-  list-style: none;
-  display: inline-block;
-}
-
-nav ul li a{
-  text-decoration:none;
-  color: black;
-  padding: 20px;
-}
-  
-nav ul li a:hover{
-  color: blue;
-}
-
-nav figure{
-  margin: 10px;
-}
-
-#logo{
-  width: 150px;
-  height: 100%;
-  border: black;
-  object-fit: cover; 
-}
-
-#contact_us{
-  background-color: #312c2c;
-  color: rgba(255, 255, 255, 0.986);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-}
-
-#headerText{
+/* Styling for the header text */
+#header-text{
   background-color: rgba(255, 255, 255, 0.876);
   max-width: 55%;
   margin-left: 30px;
@@ -178,32 +43,142 @@ nav figure{
   padding: 15px;
   border-radius: 10px;
   font-size: large;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  color:black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
   line-height: 2.0;
 }
 
-main {
-  overflow: hidden;
-  grid-area: main;
-  background-color: white;
-}
-
-main {
-  overflow: hidden;
-  overflow-y: auto;
-  grid-area: main;
-  padding: 2rem;
+/* Styling for the navigation bar */
+nav {
+  background-color: white; /* Setter hvit bakgrunn for nav */
   display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(45deg, #f5f5f5, #e1e1e1);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  justify-content: space-between; /* Spre elementene horisontalt */
+  align-items: center; /* Sentrere elementene vertikalt */
+  width: 100%; /* Sørger for at nav tar opp hele bredden */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Legger til en lett skygge for dybdeeffekt */
+  z-index: 10; /* Sørger for at navigasjonsbaren legger seg over andre elementer */
 }
 
-main {
-  background: linear-gradient(rgb(102, 100, 100), rgb(180, 180, 116));
+/* Styling for the list in the navigation bar */
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* Removing default list style and adding spacing for list items in the navigation bar */
+nav ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+/* Styling for links in the navigation bar */
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+/* Adding a hover effect to links in the navigation bar */
+nav ul li a:hover{
+  color: blue;
+}
+
+/* Styling for the figure (logo) in the navigation bar */
+nav figure{
+  margin: 10px;
+}
+
+/* Styling for the logo image */
+#logo{
+  width: 150px;
+  height: 100%;
+  border: black;
+  object-fit: cover;
+}
+
+/* Special styling for the "contact us" link in the navigation bar */
+#contact-us{
+  background-color: #312c2c;
+  color: rgba(255, 255, 255, 0.986);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Styling for the mobile menu button */
+.menu-button{
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+  display: none; /* Denne vil nå vises på små skjermer */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer; /* Legger til en peker cursor for bedre brukeropplevelse */
+  z-index: 100; /* Sikrer at knappen er over andre elementer */
+}
+
+/* Skjuler standard checkbox, men den er fortsatt funksjonell */
+.menu-toggle {
+  display: none;
+}
+
+/* Når checkboxen er merket, vis mobilmenyen */
+#menu-toggle:checked + .my-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styling for de strekene i hamburgermenyen */
+.menu-button .links{
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out; /* Legger til en overgangseffekt */
+}
+
+/* Transformere burger til kryss */
+#menu-toggle:checked ~ .menu-button .links:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-button .links:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-button .links:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Viser .my-links når #menu-toggle er merket */
+#menu-toggle:checked ~ .my-links {
+  display: flex;
+}
+
+/* Styling for the main content section*/
+main{
+  grid-area: main;
+}
+
+/* A flexible container for our articles or cards */
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.25rem;
+  background-color: rgb(250, 250, 250);
+}
+
+/* Styling for headers inside our flex container */
+.flex-container h2 {
+  flex-basis: 100%;
+  margin: 1.4rem;
 }
 
 @keyframes gradientBackground {
@@ -274,15 +249,180 @@ main {
   margin-top: 50px; /* adjust this value as needed to move the image down */
 }
 
-@media only screen and (max-width: 992px) {
-  .centered-box {
-    width: 90%;
+
+/* Styling for the footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  grid-area: footer;
+}
+
+/* Styling for links in the footer */
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Adding a hover effect to links in the footer */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for headers in the footer */
+footer h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Adding spacing between sections in the footer */
+.contact-info, .social-media, .copyright {
+  margin-bottom: 20px;
+}
+
+/* Adding spacing beside the icons in the footer */
+.fa-envelope, .fa-facebook, .fa-instagram {
+  margin-right: 5px;
+}
+
+/* Styling for h2 headers (used for consistent styling across the site) */
+#h2id{
+  text-align: center;
+}
+
+/* Styling for the "move page up" button */
+.move-page-up{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: black;
+  bottom: 20px;
+  right: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 1418px) {
+  .card{
+    width: 46%;
+  }
+
+  header{
+    height: 70vh;
+  }
+
+  #grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "nav nav"
+      "header header"
+      "main main"
+      "footer footer";
+  }
+  
+  #header-text {
+    font-size: 0.9rem;
+    padding: 0.8em;
+    background-color: red; /* For visual debugging purposes */
   }
 }
 
-@media only screen and (max-width: 768px) {
-  main {
-    padding: 1rem;
+@media only screen and (max-width: 1187px) {
+  .card{
+      width: 45%;
+  }
+
+  #header-text {
+      font-size: 0.8rem;
+      padding: 0.9em;
+      background-color: yellow; /* For visual debugging purposes */
+  }
+
+  .centered-box {
+    max-width: 1100px;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .card{
+      width: 42%;
+  }
+
+  .centered-box {
+    width: 90%;
+  }
+
+  #header-text {
+      max-width: 55%;
+      font-size: 0.8rem;
+      padding: 20px; /* Adjust padding if needed */
+      background-color: green; /* For visual debugging purposes */
+  }
+
+  header{
+      padding: 30px 0;
+  }
+
+  footer {
+      padding: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .menu-button{
+      display: flex;
+  }
+
+  .my-links{
+      display: none; /* Hidden by default */
+      flex-direction: column; /* Stacking elements vertically */
+      position: absolute; /* Positioning so that the menu can overlap content */
+      top: 60px; /* Placement under the hamburger button */
+      left: 0;
+      right: 0; /* Full width */
+      background-color: #ffffff; /* Menu background color */
+  }
+
+  .my-links ul{
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .my-links ul li{
+      text-align: center;
+      padding: 20px;
+      margin: 8px;
+      background-color: rgb(241, 241, 241);
+  }
+
+  .my-links ul li a{
+      padding: .5rem 1rem;
+  }
+
+  nav{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header{
+      height: auto;
+      padding: 15px 0;
+  }
+
+  #header-text {
+      max-width: 55%;
+      font-size: 0.9rem;
+      padding: 0.8em;
+      background-color: burlywood; /* For visual debugging purposes */
   }
 
   .centered-box {
@@ -318,9 +458,61 @@ main {
     margin-left: 0;
     max-width: 100%;
   }
+
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  .card{
+      width: 100%;
+  }
+  header {
+      padding: 15px 0;
+  }
+
+  #header-text{
+      max-width: 55%;
+      padding: 15px;
+      font-size: 1rem;
+      background-color: aqua; /* For visual debugging purposes */
+  }
+
+  .sec1 p, .sec1 a, .sec1 input{
+      width: 100%;
+  }
+
+  footer {
+      padding: 20px 10px;
+      text-align: center;
+  }
+
+  #grid-container{
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "nav"
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  header {
+      padding: 15px 0;
+  }
+  #header-text{
+      width: 70%;
+      padding: 15px;
+      font-size: 0.9rem;
+      background-color: purple; /* For visual debugging purposes */
+  }
+
+  footer {
+      padding: 20px 5px;
+  }
+
   .centered-box {
     padding: 1rem; 
   }
@@ -331,257 +523,4 @@ main {
   .image-two {
     width: 100%; 
   }
-
 }
-
-@media only screen and (min-width: 1200px) {
-  .centered-box {
-    max-width: 1100px;
-    margin: 20px auto;
-  }
-}
-
-
-#grid-container{
-  display: grid;
-  grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto auto 1fr auto;
-}
-
-
-footer {
-  background-color: white; /* Bakgrunnsfarge som matcher header */
-  color: black;
-  padding: 20px 0;
-  text-align: center;
-  grid-area: footer;
-}
-
-footer a {
-  color: black; /* Lenkefarge */
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.contact-info, .social-media, .copyright {
-  margin-bottom: 20px;
-}
-
-.fa-envelope, .fa-facebook, .fa-instagram {
-  margin-right: 5px;
-}
-  
-#h2id{
-  text-align: center;
-}
-
-.menu_button{
-  position: absolute;
-  top: 2rem;
-  right: 0.5rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.menu_button .links{
-  height: 3px;
-  width: 100%;
-  background-color: blue;
-  border-radius: 3px;
-}
-
-@media only screen and (max-width: 1418px) {
-
-  .cart{
-    width: 46%;
-  }
-
-  
-
-  
-#grid-container{
-  display: grid;
-  grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto auto 1fr auto;
-}
-
-}
-
-
-@media only screen and (max-width: 1187px) {
-
-  .cart{
-    width: 45%;
-  }
-}
-
-@media only screen and (max-width: 959px) {
-
-  .cart{
-    width: 42%;
-  }
-
-  #headerText{
-    max-width: 80%; 
-  }
-
-  
-
-  footer {
-    padding: 20px 10px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .menu_button{
-    display: flex;
-    top: 2rem;
-  }
-
-  .myLinks{
-    display: none;
-    width: 100%;
-      
-  }
-
-  nav {
-  overflow: hidden;
-    flex-direction: column;
-    align-items:flex-start;
-  }
- 
-  .myLinks ul{  
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .myLinks ul li{
-    text-align: center;
-    padding: 20px;
-    margin: 8px;
-    background-color: rgb(241, 241, 241);
-  }
-
-
-  .myLinks ul li a{
-    padding: .5rem 1rem;
-  }
-
-
-  .myLinks.active {
-    display: flex;
-  }
-
-  header {
-  overflow: hidden;
-    height: auto;
-  }
-}
-
-
-@media only screen and (max-width: 650px) {
-
-  .cart{
-
-    width: 100%;
-
-
-  }
-
-  #headerText{
-      
-    max-width: 70%;
-      
-  }
-
-  .sec1 p{
-    width: 100%;
-  }
-
-  .sec1 a{
-    width: 100%;
-  }
-
-  .sec1 input{
-    width: 100%;
-  }
-
-  footer {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  .contact-info, .social-media, .copyright {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  
-#grid-container{
-  display: grid;
-  grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto auto 1fr auto;
-}
-  
-}
-
-@media only screen and (max-width: 510px){
-  
-  #headerText{
-    width: 90%;
-  }
-
-  footer {
-    padding: 20px 5px;
-  }
-}
-
-
-
-html{
-  scroll-behavior: smooth;
-}
-
-.MovePageUp{
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background: black;
-  bottom: 20px;
-  right: 10px;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  color: white;
-  font-size: 22px;
-
-}  
-nav, header, main, footer {
-  margin: 0;
-  padding: 0;
-}
-
