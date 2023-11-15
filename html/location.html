@@ -7,17 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="XnPf-9zeTHEGP9bh4e3_RxrV9JBJjCMEwwx7kLOR-FA" />
 
-    <!-- HTML Meta Tags -->
     <title>Steder</title>
     <meta name="description" content="Steder side">
 
-    <title>Hjemme side</title>
-    <meta name="description" content="Hjemme side">
-    <link rel="stylesheet" type="text/css" href="../css/location1.css">
+    <link rel="stylesheet" type="text/css" href="../css/location.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link rel="shortcut icon" href="../Images/sidenstitle.jpg" type="image/x-icon">
-    <link rel="icon" href="../Images/sidenstitle.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../Images/page-icon.png" type="image/x-icon">
+    <link rel="icon" href="../Images/page-icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,25 +23,17 @@
 <body>
     <div id="grid-container">
         <nav>
-            <figure>
-                <a href="index.html">
-                    <img id="logo" src="../Images/logo.jpg" alt="placeholder bilde for logo">
-                </a>
-            </figure>
-
-            <a href="#" class="menu_button" aria-label="Trykk på knappen">
-                <span class="links"></span>
-                <span class="links"></span>
-                <span class="links"></span>
+            <a href="index.html">
+                <img id="logo" src="../Images/logo.jpg" alt="placeholder bilde for logo">
             </a>
-            
+
             <div class="myLinks">
                 <ul>
                     <li><a class="active" href="index.html">Hjem</a></li>
                     <li><a href="accessibility.html">Tilgjengelighet</a></li>
                     <li><a href="topical.html">Aktuelt</a></li>
                     <li><a href="location1.html">Steder</a></li>
-                    <li><a id="contact_us" href="contact_us.html">Kontakt oss</a></li>
+                    <li><a id="contact_us" href="contact-us.html">Kontakt oss</a></li>
                 </ul>
             </div>
 
@@ -56,14 +45,78 @@
         <header>
             <div id="headerText">
                 <h1>Steder</h1>
-                <p>Den må flylles</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est voluptate sequi tenetur eos omnis, eius, veritatis asperiores ut natus architecto modi provident incidunt suscipit magni illum laborum nemo, at error.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illum, modi rem impedit nostrum voluptate magni perferendis iure reiciendis minima dolorum repellat sed provident molestiae eligendi cum odio sequi. Maxime!</p>
             </div>
+            <div class="scroll-indicator"></div>
+            <p class="scroll-prompt">Skroll ned for å se innholdet</p>
         </header>
 
         <main>
-            <p>--------------</p>
-            <p>Det er deres del og ansvar for å fikse </p>
-            <p>--------------</p>
+            <div class="content-container">
+                <div class="text_content">
+                    <h2>Vår Beliggenhet på P35</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
+                    </p>
+                </div>
+                <iframe class="map-container" title="P35 Kart" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.150815550601!2d10.734104516493868!3d59.92242548187814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e61f267f039%3A0xbc5799ee4b90e5d!2sPilestredet%2035%2C%200166%20Oslo%2C%20Norway!5e0!3m2!1sen!2sus!4v1632925470419!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+            </div>
+            <div class="content-container">
+                <div class="navigation">
+                    <label for="slide1" class="nav-btn">Kantinen i P35</label>
+                    <label for="slide2" class="nav-btn">Biblioteket i P35</label>
+                    <label for="slide3" class="nav-btn">Kart</label>
+                </div>
+                <div class="image-gallery">
+                    <!-- Radio Buttons for Slides -->
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+            
+                    <div class="slides">
+                        <!-- Content for slide 1 -->
+                        <div class="slide s1">
+                            <figure>
+                            <img src="../Images/Olaf Spiseri - P35.jpg" alt="Bilde av kantinen" />
+                            <figcaption>kantine</figcaption>
+                            </figure>
+                            <div class="text_content">
+                                <h2>Kantinen i P35</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Content for slide 2 -->
+                        <div class="slide s2">
+                            <figure>
+                            <img src="../Images/home-topical.jpg" alt="Bilde av biblioteket" />
+                            <figcaption>biblo</figcaption>
+                            </figure>
+                            <div class="text_content">
+                                <h2>Biblioteket i P35</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Content for slide 3 -->
+                        <div class="slide s3">
+                            <figure>
+                            <img src="../Images/home_location.jpg" alt="Bilde av kartet" />
+                            <figcaption>kart</figcaption>
+                            </figure>
+                            <div class="text_content">
+                                <h2>Steder i Pilestret på Kart</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -74,11 +127,9 @@
           
             <section class="social-media">
               <h3>Følg Oss</h3>
-              <p>
-                Følg oss på sosiale medier for å holde deg oppdatert:
-                <a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>,
-                <a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>.
-              </p>
+              <p>Følg oss på sosiale medier for å holde deg oppdatert:</p>
+              <p><a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+              <p><a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
             </section>
           
             <section class="copyright">
