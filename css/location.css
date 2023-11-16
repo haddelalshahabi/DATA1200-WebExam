@@ -1,13 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
   background: url('../Images/Oslomet-Pilestredet-Dronebilde.jpg') no-repeat center center fixed;
   background-size: cover;
-}
-
-img, iframe {
-  max-width: 100%;
 }
 
 #grid-container {
@@ -18,6 +18,10 @@ img, iframe {
     "footer";
   grid-template-rows: auto 1fr auto auto;
   grid-template-columns: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 header{
@@ -31,10 +35,6 @@ header{
   height: auto;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 header img {
   width: 100%;
   height: auto;
@@ -43,13 +43,13 @@ header img {
 
 /* Styling for the navigation bar */
 nav {
-  background-color: white; /* Setter hvit bakgrunn for nav */
+  background-color: white;
   display: flex;
-  justify-content: space-between; /* Spre elementene horisontalt */
-  align-items: center; /* Sentrere elementene vertikalt */
-  width: 100%; /* Sørger for at nav tar opp hele bredden */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Legger til en lett skygge for dybdeeffekt */
-  z-index: 10; /* Sørger for at navigasjonsbaren legger seg over andre elementer */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
 }
 
 /* Styling for the list in the navigation bar */
@@ -91,28 +91,9 @@ nav figure{
   object-fit: cover;
 }
 
-/* Special styling for the "contact us" link in the navigation bar */
-#contact-us{
-  background-color: #312c2c;
-  color: rgba(255, 255, 255, 0.986);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-}
+/* ////////////////////////////////////////////// */
 
-/* Styling for the mobile menu button */
-.menu-button{
-  position: absolute;
-  top: 2rem;
-  right: 0.5rem;
-  display: none; /* Denne vil nå vises på små skjermer */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer; /* Legger til en peker cursor for bedre brukeropplevelse */
-  z-index: 100; /* Sikrer at knappen er over andre elementer */
-}
+/* MOBILE MENU */
 
 /* Skjuler standard checkbox, men den er fortsatt funksjonell */
 .menu-toggle {
@@ -154,182 +135,30 @@ nav figure{
   display: flex;
 }
 
-.location_image {
-  margin: 0;
-  width: auto;
-  max-width: 100%;
-  display: block;
-}
-  
-.location_image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0.5px 5px 7px -3px black;
-}
-
-.location_image figcaption {
-  color: #666;
-  font-style: italic;
-  padding: 10px;
-  font-size: 0.9em;
-  text-align: center;
+/* Styling for the mobile menu button */
+.menu-button{
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 100;
 }
 
-#logo {
-  width: 150px;
-  height: 100%;
-  border: black;
-  object-fit: cover; 
-}
+/* ///////////////////////////////////////////////////////*/
 
-#contact-us {
+#contact-us{
   background-color: #312c2c;
   color: rgba(255, 255, 255, 0.986);
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
 }
-  
-#header-text {
-  background-color: rgb(186, 241, 187);
-  max-width: 55%; 
-  min-width: 250px;
-  margin: 2% auto;
-  padding: 1em;
-  font-size: 1rem;
-  margin-left: 30px;
-  margin-top: 100px;
-  border-radius: 10px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  color:black;
-  line-height: 2.0;
-}
 
-main {
-  grid-area: main;
-  padding: 20px;
-  margin: 0; 
-}
-
-footer {
-  padding: 20px; /* Default padding */
-  background-color: #f4f4f4; /* Footer background color */
-  text-align: center; /* Center-align the text */
-  /* Add any other general styles here */
-}
-
-
-.footer-toggle {
-  display: none; /* Hide the checkbox */
-}
-
-.footer-toggle-label {
-  display: block;
-  position: fixed;
-  left: 10px; /* Adjust as needed */
-  bottom: 10px; /* Adjust as needed */
-  z-index: 1000; /* Ensure it's above other content */
-  cursor: pointer;
-  /* Additional styling for the icon */
-}
-
-.footer-toggle-label i {
-  font-size: 30px; /* Increase the icon size */
-  color: #ffd000; /* Change to your preferred color */
-  transition: color 0.3s ease; /* Optional: smooth color transition on hover */
-}
-
-.footer-toggle-label:hover i {
-  color: #0056b3; /* Darker shade on hover, change as needed */
-}
-
-.footer-content {
-  display: none;
-  position: fixed;
-  left: 0;
-  /* Rest of your styling */
-  transition: transform 0.3s ease; /* Smooth transition for opening/closing */
-  transform: translateY(100%); /* Start hidden */
-}
-
-/* Show footer when checkbox is checked */
-.footer-toggle:checked ~ .footer-content {
-  display: block;
-  transform: translateY(0); /* Slide into view */
-}
-
-
-footer{
-  grid-area: footer;
-}
-
-footer a {
-  color: black;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.content-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-  align-items: stretch;
-  margin-bottom: 50px;
-}
-
-.content-image {
-  flex: 0 1 35%;
-  max-width: 100%;
-  height: auto;
-  min-width: 150px;
-  border: 0;
-  order: 2;
-}
-
-.text-content {
-  flex: 1;
-  padding: 20px;
-  margin: 0 10px 0 0;
-  order: 1;
-}
-
-.text-content h2 {
-  font-size: 24px;
-}
-
-.text-content p {
-  line-height: 1.6;
-}
-
-.map-container {
-  flex: 0 1 35%;
-  max-width: 100%;
-  height: auto;
-  min-width: 150px;
-  border: 0;
-  order: 2;
-}
-
-iframe.map-container {
-  height: 400px;
-  width: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-  
 .move-page-up {
   position: fixed;
   width: 50px;
@@ -344,6 +173,61 @@ html {
   font-size: 22px;
 }
 
+main {
+  grid-area: main;
+  padding: 20px;
+  margin: 0; 
+}
+
+.title-and-labels {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.labels .nav-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-btn {
+  padding: 5px 10px;
+  white-space: nowrap;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
 
 .image-gallery {
   position: relative;
@@ -377,20 +261,19 @@ input[type="radio"] {
 
 .image-gallery .slide .text-content {
   flex: 1;
-  padding-right: 20px; /* Adjust as needed */
-  order: 1; /* Text first */
+  padding-right: 20px;
+  order: 1;
 }
 
 .image-gallery .slide img {
-  flex-basis: 50%; /* Adjust the size of the image */
-  order: 2; /* Image second */
-  max-width: 600px; /* Or any max size you prefer */
+  flex-basis: 50%;
+  order: 2;
+  max-width: 600px;
 }
-
 
 .image-gallery .slide figure {
   flex-basis: 50%;
-  order: 2; /* Image second */
+  order: 2;
   text-align: center;
 }
 
@@ -402,81 +285,11 @@ input[type="radio"] {
     display: block;
 }
 
-.title-and-labels {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px; /* Add some padding */
-  border-radius: 10px; /* Optional: rounded corners */
-  text-align: center; /* Center the text */
-  margin: 20px;
-}
-
-
-.main-title {
-  font-size: 3rem; /* Increase the font size */
-  font-weight: bold; /* Make the font bolder */
-  color: #ffffff; /* Set a contrasting color, e.g., white */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
-}
-
-
-.labels {
-  display: flex;
-  flex-wrap: wrap; /* Allows labels to wrap to the next line on smaller screens */
-  justify-content: center; /* Keeps labels centered */
-  gap: 10px; /* Adjust spacing between labels */
-  padding: 10px 0;
-}
-
-.labels .nav-btn {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 5px 15px;
-  border-radius: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background-color: rgba(137, 135, 135, 0.367);
-}
-
-.navigation {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  z-index: 2;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.nav-btn {
-  padding: 5px 10px; /* Adjust padding for better fitting */
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
-  font-size: 0.9em;
-  cursor: pointer;
-  margin: 5px;
-  background-color: #eee;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.nav-btn:hover {
-  background-color: #ddd;
-  transform: scale(1.1);
-}
-
-.content-container:nth-of-type(2) {
-  margin-top: 30px;
-}
-
 .map-container {
   position: relative;
-  width: 100%; /* Full width of the parent container */
-  padding-bottom: 56.25%; /* Aspect ratio of 16:9 (56.25% of 16:9 is 9) */
-  height: 0; /* Collapse the container */
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
 }
 
@@ -488,9 +301,66 @@ input[type="radio"] {
   height: 100%;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(-10px) translateX(-50%); }
-  50% { transform: translateY(-50px) translateX(-50%); }
+iframe.map-container {
+  height: 400px;
+  width: 100%;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  margin: 0 10px 0 0;
+  order: 1;
+}
+
+.text-content h2 {
+  font-size: 24px;
+}
+
+.text-content p {
+  line-height: 1.6;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+footer {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.footer-toggle {
+  display: none;
+}
+
+.footer-toggle-label {
+  display: block;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.footer-toggle-label i {
+  font-size: 30px;
+  color: #ff9100ee;
+  transition: color 0.3s ease;
+}
+
+.footer-toggle:checked ~ .footer-content {
+  display: block;
+  transform: translateY(0);
+}
+
+.footer-content {
+  display: none;
+  position: fixed;
+  left: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
 }
 
 /* ////////////////////////////////////////// */
@@ -538,20 +408,22 @@ input[type="radio"] {
 }
 
 /* ////////////////////////////////////////// */
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* MEDIA QUIERIES */
-  
-@media only screen and (max-width: 1418px) {
-
-}
-  
-@media only screen and (max-width: 1187px) {
-}
-
-@media only screen and (max-width: 959px) {
-
-}
-
 @media only screen and (max-width: 768px) {
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .menu-button{
     display: flex;
   }
@@ -560,10 +432,10 @@ input[type="radio"] {
     padding: 3px 7px;
   }
   .main-title {
-    font-size: 2rem; /* Smaller font size for mobile devices */
+    font-size: 2rem;
   }
   .title-and-labels {
-    margin: 10px; /* Less margin on smaller screens */
+    margin: 10px;
   }
   .my-links{
     display: none;
@@ -587,10 +459,7 @@ input[type="radio"] {
   .my-links ul li a{
       padding: .5rem 1rem;
   }
-  nav{
-      flex-direction: column;
-      align-items: flex-start;
-  }
+
   .text-content p {
     font-size: smaller;
   }
@@ -600,24 +469,18 @@ input[type="radio"] {
     align-items: center;
     text-align: center;
   }
-
   .image-gallery .slide .text-content,
   .image-gallery .slide img,
   .image-gallery .slide figure {
-    order: 0; /* Resets the order */
-    padding-right: 0; /* Resets the padding */
-    flex-basis: auto; /* Allows the content to adjust width automatically */
-    max-width: 100%; /* Full width */
+    order: 0;
+    padding-right: 0;
+    flex-basis: auto; 
+    max-width: 100%;
   }
-
   .image-gallery .slide img,
   .image-gallery .slide figure {
-    margin-top: 20px; /* Adds space between the text and the image */
+    margin-top: 20px;
   }
-}
-
-@media only screen and (max-width: 650px) {
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -633,8 +496,8 @@ input[type="radio"] {
     font-size: 0.9rem;
   }
   .nav-btn {
-    font-size: 0.7em; /* Further reduce font size for mobile screens */
-    padding: 2px 5px; /* Further reduce padding */
+    font-size: 0.7em;
+    padding: 2px 5px;
   }
 }
 
