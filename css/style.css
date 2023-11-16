@@ -309,62 +309,94 @@ main{
 }
 
 /* Styling for the topical slide */
-.centered-box {
-  display: flex;
-  gap: 20px;
+@keyframes gradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Har problemet med den*/
+#main-topical {
+  grid-area: main;
   padding: 30px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 2px 10px 10px -3px rgba(0, 0, 0, 0.9);
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4; /* Light background for the main area */
+}
+
+#main-topical #dynamic-article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
   max-width: 1200px;
-  margin: 20px;
 }
 
-.centered-box h1 {
-  font-size: 2rem;
-  color: #020202;
-  margin-bottom: 1rem;
+#main-topical .article-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start; /* Align to the start for better text readability */
+  background: linear-gradient(to right, #ffffff, #e6f1ff);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.centered-box p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-}
 
-.image-one {
-  width: 50%;
+#main-topical .article-section img {
+  width: 100%;
   height: auto;
   border-radius: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  order: 2; /* Change order to alternate text and image */
 }
 
-
-.img-text-wrapper {
-  display: flex;
-  align-items: start;
-  gap: 1rem;
+#main-topical .article-section .text-content {
+  padding: 15px;
+  text-align: justify;
+  order: 1; /* Change order to alternate text and image */
 }
 
-.right-text {
-  flex-grow: 1;
-  max-width: 60%;
-  margin-left: 1rem;;
+/* Add margin-top adjustment for the fourth image */
+#main-topical #dynamic-article .adjust-image {
+  margin-top: 50px; /* This is to move the image down */
 }
 
-.image-two {
-  width: 50%;
-  border-radius: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  margin-top: 50px; /* adjust this value as needed to move the image down */
+/* Hover effects */
+#main-topical .article-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
+#main-topical .article-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Pseudo-element for border effect */
+#main-topical .article-section .text-content::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+#main-topical .article-section .text-content:hover::before {
+  opacity: 1;
+}
 
 /* Styling for the accessibility slide */
 
@@ -525,7 +557,7 @@ footer h3 {
   #header-text {
     font-size: 0.9rem;
     padding: 0.8em;
-    background-color: red; /* For visual debugging purposes */
+    background-color: rgba(255, 255, 255, 0.876);
   }
 }
 
@@ -537,7 +569,7 @@ footer h3 {
   #header-text {
       font-size: 0.8rem;
       padding: 0.9em;
-      background-color: yellow; /* For visual debugging purposes */
+      background-color: rgba(255, 255, 255, 0.876);
   }
 
   .centered-box {
@@ -549,6 +581,14 @@ footer h3 {
 @media only screen and (max-width: 959px) {
   .card{
       width: 42%;
+  }
+
+  nav{
+    background-color: #ffffff;
+  }
+
+  .my-links{
+    background-color: #ffffff;
   }
 
   .centered-box {
@@ -605,6 +645,7 @@ footer h3 {
   nav{
       flex-direction: column;
       align-items: flex-start;
+      color: #ffffff;
   }
 
   header{
@@ -619,40 +660,25 @@ footer h3 {
       background-color: burlywood; /* For visual debugging purposes */
   }
 
-  .centered-box {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-  }
-
-  .image-one {
-    width: 70%;
-    margin-bottom: 20px;
-  }
-
-  .image-two {
-    width: 70%;
-    margin-bottom: 20px;
-  }
-
-  .centered-box div {
+  main #dynamic-article {
     max-width: 100%;
   }
 
-  .centered-box h1 {
-    font-size: 1.5rem;
+  main .article-section {
+    grid-template-columns: 1fr;
+    padding: 15px; /* Reduced padding */
   }
 
-  .img-text-wrapper {
-    flex-direction: column;
+  main .article-section img {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height proportionally */
+    margin-bottom: 20px; /* Space between image and text */
   }
 
-  .right-text {
-    margin-left: 0;
-    max-width: 100%;
+  main .article-section .text-content {
+    font-size: smaller; /* Adjust text size for readability */
+    padding: 10px; /* Reduced padding for text */
   }
-
 }
 
 @media only screen and (max-width: 650px) {
@@ -705,16 +731,5 @@ footer h3 {
 
   footer {
       padding: 20px 5px;
-  }
-
-  .centered-box {
-    padding: 1rem; 
-  }
-
-  .image-one {
-    width: 100%; 
-  }
-  .image-two {
-    width: 100%; 
   }
 }
