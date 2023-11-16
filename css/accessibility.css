@@ -130,7 +130,7 @@ header {
   display: flex;
   flex-direction: column;
   grid-area: header;
-  background: url(../Images/home_header.jpg);
+  background: url(../Images/home-header.jpg);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
