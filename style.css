@@ -704,3 +704,75 @@ footer h3 {
       "footer";
   }
 }
+
+@media only screen and (max-width: 510px) {
+  .card{
+    width: 100%;
+}
+
+#header-text {
+  max-width: 55%;
+  padding: 10px;
+  margin: 25px; /* Øk dette tallet for mer plass på bunnen inne i boksen */
+  font-size: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.876);
+}
+
+
+.sec1 p, .sec1 a, .sec1 input{
+    width: 100%;
+}
+
+footer {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+} 
+
+@media only screen and (max-width: 480px) {
+  .card{
+    width: 100%;
+}
+
+#header-text {
+  max-width: 55%;
+  padding: 10px;
+  margin: 20px; /* Øk dette tallet for mer plass på bunnen inne i boksen */
+  font-size: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.876);
+}
+
+
+.sec1 p, .sec1 a, .sec1 input{
+    width: 100%;
+}
+
+footer {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+}
