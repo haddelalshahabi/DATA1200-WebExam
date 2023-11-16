@@ -56,7 +56,7 @@ nav {
   align-items: center; /* Sentrere elementene vertikalt */
   width: 100%; /* Sørger for at nav tar opp hele bredden */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Legger til en lett skygge for dybdeeffekt */
-  z-index: 10; /* Sørger for at navigasjonsbaren legger seg over andre elementer */
+  z-index: 1000; /* Sørger for at navigasjonsbaren legger seg over andre elementer */
 }
 
 /* Styling for the list in the navigation bar */
@@ -579,16 +579,8 @@ footer h3 {
 }
 
 @media only screen and (max-width: 959px) {
-  .card{
+  .card {
       width: 42%;
-  }
-
-  nav{
-    background-color: #ffffff;
-  }
-
-  .my-links{
-    background-color: #ffffff;
   }
 
   .centered-box {
@@ -596,20 +588,18 @@ footer h3 {
   }
 
   #header-text {
-      max-width: 55%;
-      font-size: 0.8rem;
-      padding: 20px; /* Adjust padding if needed */
-      background-color: green; /* For visual debugging purposes */
-  }
-
-  header{
-      padding: 30px 0;
+    max-width: 55%;
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    margin: 55px;
+    background-color: rgba(255, 255, 255, 0.876);
   }
 
   footer {
-      padding: 20px 10px;
+    padding: 20px 10px;
   }
 }
+
 
 @media only screen and (max-width: 700px) {
   .menu-button{
@@ -648,18 +638,16 @@ footer h3 {
       color: #ffffff;
   }
 
-  header{
-      height: auto;
-      padding: 15px 0;
-  }
+  
 
   #header-text {
       max-width: 55%;
-      font-size: 0.9rem;
-      padding: 0.8em;
-      background-color: burlywood; /* For visual debugging purposes */
+      font-size: 0.8rem;
+      padding: 0.8rem;
+      margin: 40px;
+      background-color: rgba(255, 255, 255, 0.876);
   }
-
+ 
   main #dynamic-article {
     max-width: 100%;
   }
@@ -685,16 +673,15 @@ footer h3 {
   .card{
       width: 100%;
   }
-  header {
-      padding: 15px 0;
-  }
 
-  #header-text{
-      max-width: 55%;
-      padding: 15px;
-      font-size: 1rem;
-      background-color: aqua; /* For visual debugging purposes */
+  #header-text {
+    max-width: 55%;
+    padding: 10px;
+    margin: 25px; /* Øk dette tallet for mer plass på bunnen inne i boksen */
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.876);
   }
+  
 
   .sec1 p, .sec1 a, .sec1 input{
       width: 100%;
@@ -715,21 +702,5 @@ footer h3 {
       "header"
       "main"
       "footer";
-  }
-}
-
-@media only screen and (max-width: 510px) {
-  header {
-      padding: 15px 0;
-  }
-  #header-text{
-      width: 70%;
-      padding: 15px;
-      font-size: 0.9rem;
-      background-color: purple; /* For visual debugging purposes */
-  }
-
-  footer {
-      padding: 20px 5px;
   }
 }
