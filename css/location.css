@@ -1,516 +1,516 @@
 html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background: url('../Images/Oslomet-Pilestredet-Dronebilde.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-#grid-container {
-  display: grid;
-  grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto 1fr auto auto;
-  grid-template-columns: 100%;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-header{
-  display: flex;
-  flex-direction: column;
-  grid-area: header;
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-}
-
-header img {
-  width: 100%;
-  height: auto;
-  max-height: 70vh;
-}
-
-/* Styling for the navigation bar */
-nav {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 10;
-}
-
-/* Styling for the list in the navigation bar */
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-}
-
-/* Removing default list style and adding spacing for list items in the navigation bar */
-nav ul li{
-  list-style: none;
-  display: inline-block;
-}
-
-/* Styling for links in the navigation bar */
-nav ul li a{
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-}
-
-/* Adding a hover effect to links in the navigation bar */
-nav ul li a:hover{
-  color: blue;
-}
-
-/* Styling for the figure (logo) in the navigation bar */
-nav figure{
-  margin: 10px;
-}
-
-/* Styling for the logo image */
-#logo{
-  width: 150px;
-  height: 100%;
-  border: black;
-  object-fit: cover;
-}
-
-/* ////////////////////////////////////////////// */
-
-/* MOBILE MENU */
-
-/* Skjuler standard checkbox, men den er fortsatt funksjonell */
-.menu-toggle {
-  display: none;
-}
-
-/* Når checkboxen er merket, vis mobilmenyen */
-#menu-toggle:checked + .my-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* Styling for de strekene i hamburgermenyen */
-.menu-button .links{
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out; /* Legger til en overgangseffekt */
-}
-
-/* Transformere burger til kryss */
-#menu-toggle:checked ~ .menu-button .links:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-#menu-toggle:checked ~ .menu-button .links:nth-child(2) {
-  opacity: 0;
-}
-
-#menu-toggle:checked ~ .menu-button .links:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Viser .my-links når #menu-toggle er merket */
-#menu-toggle:checked ~ .my-links {
-  display: flex;
-}
-
-/* Styling for the mobile menu button */
-.menu-button{
-  position: absolute;
-  top: 2rem;
-  right: 0.5rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-/* ///////////////////////////////////////////////////////*/
-
-#contact-us{
-  background-color: #312c2c;
-  color: rgba(255, 255, 255, 0.986);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.move-page-up {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background: black;
-  bottom: 20px;
-  right: 10px;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  color: white;
-  font-size: 22px;
-}
-
-main {
-  grid-area: main;
-  padding: 20px;
-  margin: 0; 
-}
-
-.title-and-labels {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px;
-}
-
-.labels {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
-}
-
-.labels .nav-btn {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 5px 15px;
-  border-radius: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-btn {
-  padding: 5px 10px;
-  white-space: nowrap;
-  font-size: 0.9em;
-  cursor: pointer;
-  margin: 5px;
-  background-color: #eee;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.nav-btn:hover {
-  background-color: #ddd;
-  transform: scale(1.1);
-}
-
-.main-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.image-gallery {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.image-gallery input[type="radio"] {
-  display: none;
-}
-
-.image-gallery .slides {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-input[type="radio"] {
-  position: absolute;
-  left: -9999px;
-}
-
-.image-gallery .slide {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-}
-
-.image-gallery .slide .text-content {
-  flex: 1;
-  padding-right: 20px;
-  order: 1;
-}
-
-.image-gallery .slide img {
-  flex-basis: 50%;
-  order: 2;
-  max-width: 600px;
-}
-
-.image-gallery .slide figure {
-  flex-basis: 50%;
-  order: 2;
-  text-align: center;
-}
-
-#slide1:checked ~ .slides .s1,
-#slide2:checked ~ .slides .s2,
-#slide3:checked ~ .slides .s3,
-#slide4:checked ~ .slides .s4,
-#slide5:checked ~ .slides .s5 {
-    display: block;
-}
-
-.map-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-iframe.map-container {
-  height: 400px;
-  width: 100%;
-}
-
-.text-content {
-  flex: 1;
-  padding: 20px;
-  margin: 0 10px 0 0;
-  order: 1;
-}
-
-.text-content h2 {
-  font-size: 24px;
-}
-
-.text-content p {
-  line-height: 1.6;
-}
-
-img, iframe {
-  max-width: 100%;
-}
-
-footer {
-  padding: 20px;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.footer-toggle {
-  display: none;
-}
-
-.footer-toggle-label {
-  display: block;
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.footer-toggle-label i {
-  font-size: 30px;
-  color: #ff9100ee;
-  transition: color 0.3s ease;
-}
-
-.footer-toggle:checked ~ .footer-content {
-  display: block;
-  transform: translateY(0);
-}
-
-.footer-content {
-  display: none;
-  position: fixed;
-  left: 0;
-  transition: transform 0.3s ease;
-  transform: translateY(100%);
-}
-
-/* ////////////////////////////////////////// */
-/* LINK SIDEBAR CSS  */
-
-/* Reference CodePen */
-/* https://codepen.io/ggsingla/pen/MWOzxbq */
-
-.link-list {
-	position: fixed;
-	left: 5em;
-	bottom: 1em;
-	transform: translatey(-50%);
-	padding: 1em 0.5em 1em 1em;
-	background: #fafafa;
-	border-radius: 0.5em 0 0 0.5em;
-	box-shadow: -4px 0px 0px orange;
-	transition: all 300ms ease;
-}
-
-.link-list:hover {
-  box-shadow: -8px 0px 20px orange;
-	padding: 1em;
-}
-
-.social-media-links {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  padding: 0;
-  margin: 0;
-}
-.link a {
-  color: #111;
-  font-size: 1.5rem;
-  transition: all 200ms ease;
-}
-.link a:visited {
-  color: #111;
-}
-.link a:hover {
-  color: orange;
-  font-size: 1.75rem;
-}
-
-/* ////////////////////////////////////////// */
-
-footer a {
-  color: black;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* MEDIA QUIERIES */
-@media only screen and (max-width: 768px) {
-  nav{
-    flex-direction: column;
-    align-items: flex-start;
+    scroll-behavior: smooth;
   }
-  .menu-button{
+  
+  body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background: url('../Images/Oslomet-Pilestredet-Dronebilde.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  #grid-container {
+    display: grid;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-columns: 100%;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  header{
     display: flex;
+    flex-direction: column;
+    grid-area: header;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
   }
-  .nav-btn {
-    font-size: 0.8em;
-    padding: 3px 7px;
+  
+  header img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
   }
-  .main-title {
-    font-size: 2rem;
+  
+  /* Styling for the navigation bar */
+  nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
   }
-  .title-and-labels {
+  
+  /* Styling for the list in the navigation bar */
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  /* Removing default list style and adding spacing for list items in the navigation bar */
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+  }
+  
+  /* Styling for links in the navigation bar */
+  nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+  }
+  
+  /* Adding a hover effect to links in the navigation bar */
+  nav ul li a:hover{
+    color: blue;
+  }
+  
+  /* Styling for the figure (logo) in the navigation bar */
+  nav figure{
     margin: 10px;
   }
-  .my-links{
+  
+  /* Styling for the logo image */
+  #logo{
+    width: 150px;
+    height: 100%;
+    border: black;
+    object-fit: cover;
+  }
+  
+  /* ////////////////////////////////////////////// */
+  
+  /* MOBILE MENU */
+  
+  /* Skjuler standard checkbox, men den er fortsatt funksjonell */
+  .menu-toggle {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
   }
-  .my-links ul{
-      flex-direction: column;
-      width: 100%;
-  }
-  .my-links ul li{
-      text-align: center;
-      padding: 20px;
-      margin: 8px;
-      background-color: rgb(241, 241, 241);
-  }
-  .my-links ul li a{
-      padding: .5rem 1rem;
-  }
-
-  .text-content p {
-    font-size: smaller;
-  }
-
-  .image-gallery .slide {
+  
+  /* Når checkboxen er merket, vis mobilmenyen */
+  #menu-toggle:checked + .my-links {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  
+  /* Styling for de strekene i hamburgermenyen */
+  .menu-button .links{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out; /* Legger til en overgangseffekt */
+  }
+  
+  /* Transformere burger til kryss */
+  #menu-toggle:checked ~ .menu-button .links:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  #menu-toggle:checked ~ .menu-button .links:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked ~ .menu-button .links:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Viser .my-links når #menu-toggle er merket */
+  #menu-toggle:checked ~ .my-links {
+    display: flex;
+  }
+  
+  /* Styling for the mobile menu button */
+  .menu-button{
+    position: absolute;
+    top: 2rem;
+    right: 0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  /* ///////////////////////////////////////////////////////*/
+  
+  #contact-us{
+    background-color: #312c2c;
+    color: rgba(255, 255, 255, 0.986);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .move-page-up {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    bottom: 20px;
+    right: 10px;
+    text-decoration: none;
     text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
   }
-  .image-gallery .slide .text-content,
-  .image-gallery .slide img,
-  .image-gallery .slide figure {
-    order: 0;
-    padding-right: 0;
-    flex-basis: auto; 
-    max-width: 100%;
+  
+  main {
+    grid-area: main;
+    padding: 20px;
+    margin: 0; 
   }
-  .image-gallery .slide img,
-  .image-gallery .slide figure {
-    margin-top: 20px;
+  
+  .title-and-labels {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  nav ul li a {
-    padding: 15px;
-    font-size: larger;
+  
+  .labels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
   }
-  nav ul {
+  
+  .labels .nav-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .nav-btn {
+    padding: 5px 10px;
+    white-space: nowrap;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+  }
+  
+  .main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .image-gallery {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .image-gallery input[type="radio"] {
     display: none;
   }
-  .text-content {
+  
+  .image-gallery .slides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .image-gallery .slide {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px;
-    font-size: 0.9rem;
   }
-  .nav-btn {
-    font-size: 0.7em;
-    padding: 2px 5px;
+  
+  .image-gallery .slide .text-content {
+    flex: 1;
+    padding-right: 20px;
+    order: 1;
   }
-}
-
-@media only screen and (max-width: 510px) {
-
-} 
-
-@media only screen and (max-width: 480px) {
+  
+  .image-gallery .slide img {
+    flex-basis: 50%;
+    order: 2;
+    max-width: 600px;
+  }
+  
+  .image-gallery .slide figure {
+    flex-basis: 50%;
+    order: 2;
+    text-align: center;
+  }
+  
+  #slide1:checked ~ .slides .s1,
+  #slide2:checked ~ .slides .s2,
+  #slide3:checked ~ .slides .s3,
+  #slide4:checked ~ .slides .s4,
+  #slide5:checked ~ .slides .s5 {
+      display: block;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  iframe.map-container {
+    height: 400px;
+    width: 100%;
+  }
+  
   .text-content {
-    padding: 8px;
-    font-size: 0.8rem;
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px 0 0;
+    order: 1;
   }
-
-}
-
-/* ////////////////////////////////////////// */
+  
+  .text-content h2 {
+    font-size: 24px;
+  }
+  
+  .text-content p {
+    line-height: 1.6;
+  }
+  
+  img, iframe {
+    max-width: 100%;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .footer-toggle {
+    display: none;
+  }
+  
+  .footer-toggle-label {
+    display: block;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .footer-toggle-label i {
+    font-size: 30px;
+    color: #ff9100ee;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-toggle:checked ~ .footer-content {
+    display: block;
+    transform: translateY(0);
+  }
+  
+  .footer-content {
+    display: none;
+    position: fixed;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+  }
+  
+  /* ////////////////////////////////////////// */
+  /* LINK SIDEBAR CSS  */
+  
+  /* Reference CodePen */
+  /* https://codepen.io/ggsingla/pen/MWOzxbq */
+  
+  .link-list {
+      position: fixed;
+      left: 5em;
+      bottom: 1em;
+      transform: translatey(-50%);
+      padding: 1em 0.5em 1em 1em;
+      background: #fafafa;
+      border-radius: 0.5em 0 0 0.5em;
+      box-shadow: -4px 0px 0px orange;
+      transition: all 300ms ease;
+  }
+  
+  .link-list:hover {
+    box-shadow: -8px 0px 20px orange;
+      padding: 1em;
+  }
+  
+  .social-media-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  .link a {
+    color: #111;
+    font-size: 1.5rem;
+    transition: all 200ms ease;
+  }
+  .link a:visited {
+    color: #111;
+  }
+  .link a:hover {
+    color: orange;
+    font-size: 1.75rem;
+  }
+  
+  /* ////////////////////////////////////////// */
+  
+  footer a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* MEDIA QUIERIES */
+  @media only screen and (max-width: 768px) {
+    nav{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .menu-button{
+      display: flex;
+    }
+    .nav-btn {
+      font-size: 0.8em;
+      padding: 3px 7px;
+    }
+    .main-title {
+      font-size: 2rem;
+    }
+    .title-and-labels {
+      margin: 10px;
+    }
+    .my-links{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+    }
+    .my-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .my-links ul li{
+        text-align: center;
+        padding: 20px;
+        margin: 8px;
+        background-color: rgb(241, 241, 241);
+    }
+    .my-links ul li a{
+        padding: .5rem 1rem;
+    }
+  
+    .text-content p {
+      font-size: smaller;
+    }
+  
+    .image-gallery .slide {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .image-gallery .slide .text-content,
+    .image-gallery .slide img,
+    .image-gallery .slide figure {
+      order: 0;
+      padding-right: 0;
+      flex-basis: auto; 
+      max-width: 100%;
+    }
+    .image-gallery .slide img,
+    .image-gallery .slide figure {
+      margin-top: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    nav ul li a {
+      padding: 15px;
+      font-size: larger;
+    }
+    nav ul {
+      display: none;
+    }
+    .text-content {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+    .nav-btn {
+      font-size: 0.7em;
+      padding: 2px 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 510px) {
+  
+  } 
+  
+  @media only screen and (max-width: 480px) {
+    .text-content {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  
+  }
+  
+  /* ////////////////////////////////////////// */

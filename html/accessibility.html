@@ -19,7 +19,7 @@
     <meta name="description" content="Accessibility page">
     
     <!-- External CSS: Link to the main stylesheet for styling the webpage -->
-    <link rel="stylesheet" type="text/css" href="../css/accessibility.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     
     <!-- Font Awesome: Provides icons for UI enhancement -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,6 +36,7 @@
 <body>
     <!-- Grid container: Main layout structure for the entire page -->
     <div id="grid-container">
+
         <!-- Header: Top section of the webpage, includes navigation and branding -->
         <header>
             <!-- Navigation bar: Contains links to other pages and interactive elements -->
@@ -63,53 +64,96 @@
                         <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
                     </ul>
                 </div>
-                
-                 <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
-                 <a class="move-page-up" href="#" aria-label="Move Page Up">
+
+                    <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
+                    <a class="move-page-up" href="#" aria-label="Move Page Up">
                     <i class="fa fa-arrow-circle-up"></i>
                 </a>
             </nav>
 
-        <header>
-            <div id="headerText">
+            <div id="header-text">
                 <h1>Tilgjengelighet</h1>
                 <p>Velkommen til vår side dedikert til tilgjengelighet. På OsloMet forstår vi viktigheten av å skape et nettsted som er tilgjengelig for alle brukere, uavhengig av deres evner eller bruken av assistiv teknologi. Tilgjengelighet betyr å designe våre digitale ressurser slik at de kan brukes av så mange mennesker som mulig, inkludert de med funksjonsnedsettelser som påvirker deres syn, hørsel, motoriske ferdigheter eller kognitive evner.</p>
             </div>
         </header>
 
         <main>
-            <div class="fancy-box">
-                <h1>Planlegging og Implementering av Universell Utforming</h1>
-                <p>Fra starten av designprosessen har vi integrert prinsipper for universell utforming i vår nettside. Dette inkluderer: </p>
-                <section>
-                    <h2>Bruk av Semantisk HTML:</h2>
-                    <p>Ved å bruke HTML-elementer i henhold til deres formål, hjelper vi assistiv teknologi med å forstå og tolke innholdet på siden vår riktig.</p>
-                </section>
-                 <section>
-            <h2>Alt-tekster for Bilder</h2>
-            <p>Alle bilder på nettstedet inkluderer beskrivende alt-tekster som gjør innholdet tilgjengelig for skjermlesere.</p>
-        </section>
+            <div class="tests-container">
+                <!-- Test for Home -->
+                <div class="fancy-box">
+                    <h1>Test for Home:</h1>
+                    <div class="test-pair-container">
+                        <div class="test-box">
+                            <p>Før Test:</p>
+                            <img src="../Images/before-test-home.jpg" alt="Før Test for Home">
+                        </div>
+                        <div class="test-box">
+                            <p>Etter Test:</p>
+                            <img src="../Images/after-test-home.jpg" alt="Etter Test for Home">
+                        </div>
+                    </div>
+                </div>
         
-        <section>
-            <h2>Tilgjengelig Navigasjon</h2>
-            <p>Vår nettstedsnavigasjon er designet for å være enkel og intuitiv, med tastatur-navigasjon og skjermleser-kompatibilitet som en prioritet.</p>
-        </section>
+                <!-- Test for Accessibility -->
+                <div class="fancy-box">
+                    <h1>Test for Accessibility:</h1>
+                    <div class="test-pair-container">
+                        <div class="test-box">
+                            <p>Før Test:</p>
+                            <img src="../C:\Users\zakar\Downloads\Data1200-WebExam-main (1)\Data1200-WebExam-main\Images\Accessbility før.png" alt="Før Test for Accessibility">
+                        </div>
+                        <div class="test-box">
+                            <p>Etter Test:</p>
+                            <img src="../Images/after-test-accessibility.jpg" alt="Etter Test for Accessibility">
+                        </div>
+                    </div>
+                </div>
         
-        <section>
-            <h2>Tilgjengelig Fargekontrast</h2>
-            <p>Fargevalgene er testet for å sikre at de er lesbare for brukere med fargevisjonsforstyrrelser.</p>
-        </section>
+                <!-- Test for Topical -->
+                <div class="fancy-box">
+                    <h1>Test for Topical:</h1>
+                    <div class="test-pair-container">
+                        <div class="test-box">
+                            <p>Før Test:</p>
+                            <img src="../Images/before-test-topical.jpg" alt="Før Test for Topical">
+                        </div>
+                        <div class="test-box">
+                            <p>Etter Test:</p>
+                            <img src="../Images/after-test-topical.jpg" alt="Etter Test for Topical">
+                        </div>
+                    </div>
+                </div>
         
-        <section>
-            <h2>Responsivt Design</h2>
-            <p>Siden er bygget for å være brukervennlig på en rekke enheter, inkludert mobile skjermer og tabletter, sikrer at alle brukere kan få tilgang til vårt innhold uansett hvilken enhet de bruker.</p>
-        </section>
+                <!-- Test for Location -->
+                <div class="fancy-box">
+                    <h1>Test for Location:</h1>
+                    <div class="test-pair-container">
+                        <div class="test-box">
+                            <p>Før Test:</p>
+                            <img src="../Images/before-test-location.jpg" alt="Før Test for Location">
+                        </div>
+                        <div class="test-box">
+                            <p>Etter Test:</p>
+                            <img src="../Images/after-test-location.jpg" alt="Etter Test for Location">
+                        </div>
+                    </div>
+                </div>
         
-        <section>
-            <h2>Kontinuerlig Forbedring</h2>
-            <p>Ved å anvende disse og andre tilgjengelighetsteknikker, arbeider vi mot et nettsted som er mer inkluderende og tilgjengelig for alle. Vi forstår at tilgjengelighet er en løpende prosess og er forpliktet til kontinuerlig forbedring. Vi verdsetter tilbakemelding fra våre brukere og bruker denne informasjonen til å gjøre nettstedet vårt enda bedre.</p>
-        </section>
-            
+                <!-- Test for Contact Us -->
+                <div class="fancy-box">
+                    <h1>Test for Contact Us:</h1>
+                    <div class="test-pair-container">
+                        <div class="test-box">
+                            <p>Før Test:</p>
+                            <img src="../Images/before-test-contact.jpg" alt="Før Test for Contact Us">
+                        </div>
+                        <div class="test-box">
+                            <p>Etter Test:</p>
+                            <img src="../Images/after-test-contact.jpg" alt="Etter Test for Contact Us">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer: Contains additional information, links, and credits -->

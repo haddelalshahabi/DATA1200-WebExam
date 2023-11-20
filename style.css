@@ -399,7 +399,75 @@ main{
 }
 
 /* Styling for the accessibility slide */
-
+/* Stil for den fancy boksen */
+.fancy-box {
+  background-color: #f9f9f9; 
+  border: 1px solid #d3d3d3; 
+  border-radius: 10px; 
+  padding: 20px; 
+  margin: 5px 0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .fancy-box p {
+  font-size: 16px; 
+  line-height: 1.6; 
+  color: #333; 
+  }
+  
+  
+  .fancy-box h1, .fancy-box h2 {
+  color: #030303; 
+  margin-bottom: 10px; 
+  }
+  
+  
+  /* Container for alle testene */
+  .tests-container {
+    display: flex;
+    justify-content: space-around; /* Jevn fordeling av bokser */
+    flex-wrap: wrap; /* Tillater bokser å ombrytes på mindre skjermer */
+    padding: 20px; /* Ekstra plass rundt containeren */
+  }
+  
+  /* Stil for hver fancy boks */
+  .fancy-box {
+    background-color: rgb(247, 249, 250); /* Lys bakgrunnsfarge */
+    border: 5px solid #d3d3d3; /* Subtil kantlinje */
+    border-radius: 10px; /* Avrundede hjørner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skyggeeffekt */
+    margin: 10px; /* Margin rundt hver boks */
+    padding: 20px; /* Padding inne i boksen */
+    width: calc(50% - 20px); /* Bredde for å passe to bokser i en rad */
+    transition: transform 0.3s ease; /* Animasjon for hover-effekten */
+  }
+  
+  .fancy-box:hover {
+    transform: scale(1.05); /* Forstørrer boksen litt ved hover */
+  }
+  
+  /* Container for alle testene */
+  .tests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 1px; /* Legger til en toppmargin på 50px */
+  }
+  
+  /* Stil for hver fancy boks */
+  .fancy-box {
+    background-color: rgb(247, 249, 250);
+    border: 5px solid #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 100px;
+    width: calc(60% - 60px); /* Justert for å passe 3 bokser i en rad */
+    transition: transform 0.3s ease;
+  }
+  
 
 /* Styling for the contact us slide */
 input[type=text], select, textarea, input[type=email] {
