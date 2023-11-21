@@ -36,41 +36,44 @@
 <body>
     <!-- Grid container: Main layout structure for the entire page -->
     <div id="grid-container">
-
-        <!-- Header: Top section of the webpage, includes navigation and branding -->
-        <header>
-            <!-- Navigation bar: Contains links to other pages and interactive elements -->
-            <nav>
+        <!-- Navigation bar: Contains links to other pages and interactive elements -->
+        <nav>
+            <figure>
                 <!-- Logo: Represents the brand identity; links back to the homepage -->
-                <a href="index.html">
+                <a href="../index.html">
                     <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
                 </a>
+            </figure>
 
-                <!-- Mobile menu toggle: Checkbox hack for a responsive menu button -->
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                <label for="menu-toggle" class="menu-button" aria-label="Open the menu">
-                    <span class="links"></span>
-                    <span class="links"></span>
-                    <span class="links"></span>
-                </label>
-                
-                <!-- Navigation links: List of links for site navigation -->
-                <div class="my-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="accessibility.html">Accessibility</a></li>
-                        <li><a href="topical.html">Topical</a></li>
-                        <li><a href="location.html">Location</a></li>
-                        <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
-                    </ul>
-                </div>
+            <!-- Checkbox for å veksle menyvisning -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-labelledby="menu-toggle-label" />
+            <!-- Label for å vise hamburgerikon og fungere som interaktivt element for checkbox -->
+            <label for="menu-toggle" class="menu-button">
+                <span class="links"></span>
+                <span class="links"></span>
+                <span class="links"></span>
+                <!-- Skjult label tekst for skjermlesere -->
+                <span id="menu-toggle-label" class="sr-only">Open menu</span>
+            </label>
+            
+            <!-- Navigation links: List of links for site navigation -->
+            <div class="my-links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="topical.html">Topical</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
+                </ul>
+            </div>
+            
+             <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
+             <a class="move-page-up" href="#" aria-label="Move Page Up">
+                <i class="fa fa-arrow-circle-up"></i>
+            </a>
+        </nav>
 
-                    <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
-                    <a class="move-page-up" href="#" aria-label="Move Page Up">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-            </nav>
-
+        <header>
             <div id="header-text">
                 <h1>Tilgjengelighet</h1>
                 <p>Velkommen til vår side dedikert til tilgjengelighet. På OsloMet forstår vi viktigheten av å skape et nettsted som er tilgjengelig for alle brukere, uavhengig av deres evner eller bruken av assistiv teknologi. Tilgjengelighet betyr å designe våre digitale ressurser slik at de kan brukes av så mange mennesker som mulig, inkludert de med funksjonsnedsettelser som påvirker deres syn, hørsel, motoriske ferdigheter eller kognitive evner.</p>
@@ -85,11 +88,12 @@
                     <div class="test-pair-container">
                         <div class="test-box">
                             <p>Før Test:</p>
-                            <img src="../Images/before-test-home.jpg" alt="Før Test for Home">
+                            <img src="../Images/home-before-fixing-the-error.jpg" alt="Før Test for Home">
+                            <img src="../Images/home1-before-fixing-the-error.jpg" alt="Før Test for Home">
                         </div>
                         <div class="test-box">
                             <p>Etter Test:</p>
-                            <img src="../Images/after-test-home.jpg" alt="Etter Test for Home">
+                            <img src="../Images/home-after-fixing-the-error.jpg" alt="Etter Test for Home">
                         </div>
                     </div>
                 </div>
@@ -100,11 +104,11 @@
                     <div class="test-pair-container">
                         <div class="test-box">
                             <p>Før Test:</p>
-                            <img src="../C:\Users\zakar\Downloads\Data1200-WebExam-main (1)\Data1200-WebExam-main\Images\Accessbility før.png" alt="Før Test for Accessibility">
+                            <img src="../Images/accessibility-before-fixing-the-error.jpg" alt="Før Test for Accessibility">
                         </div>
                         <div class="test-box">
                             <p>Etter Test:</p>
-                            <img src="../Images/after-test-accessibility.jpg" alt="Etter Test for Accessibility">
+                            <img src="../Images/accessibility-after-fixing-the-error.jpg" alt="Etter Test for Accessibility">
                         </div>
                     </div>
                 </div>
@@ -115,11 +119,11 @@
                     <div class="test-pair-container">
                         <div class="test-box">
                             <p>Før Test:</p>
-                            <img src="../Images/before-test-topical.jpg" alt="Før Test for Topical">
+                            <img src="../Images/topical-before-fixing-the-error.jpg" alt="Før Test for Topical">
                         </div>
                         <div class="test-box">
                             <p>Etter Test:</p>
-                            <img src="../Images/after-test-topical.jpg" alt="Etter Test for Topical">
+                            <img src="../Images/topical-after-fixing-the-error.jpg" alt="Etter Test for Topical">
                         </div>
                     </div>
                 </div>
@@ -130,11 +134,12 @@
                     <div class="test-pair-container">
                         <div class="test-box">
                             <p>Før Test:</p>
-                            <img src="../Images/before-test-location.jpg" alt="Før Test for Location">
+                            <img src="../Images/location-before-fixing-the-error.jpg" alt="Før Test for Location">
+                            <img src="../Images/location1-before-fixing-the-error.jpg" alt="Før Test for Location">
                         </div>
                         <div class="test-box">
                             <p>Etter Test:</p>
-                            <img src="../Images/after-test-location.jpg" alt="Etter Test for Location">
+                            <img src="../Images/location-after-fixing-the-error.jpg" alt="Etter Test for Location">
                         </div>
                     </div>
                 </div>
@@ -145,15 +150,31 @@
                     <div class="test-pair-container">
                         <div class="test-box">
                             <p>Før Test:</p>
-                            <img src="../Images/before-test-contact.jpg" alt="Før Test for Contact Us">
+                            <img src="../Images/contact-us-before-fixing-the-error.jpg" alt="Før Test for Contact Us">
                         </div>
                         <div class="test-box">
                             <p>Etter Test:</p>
-                            <img src="../Images/after-test-contact.jpg" alt="Etter Test for Contact Us">
+                            <img src="../Images/contact-us-after-fixing-the-error.jpg" alt="Etter Test for Contact Us">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Test for Contact Us -->
+            <div class="fancy-box">
+                <h1>Andre tester vi sjekker gjennom </h1>
+                <div class="test-pair-container">
+                    <div class="test-box">
+                        <p>Nu Html Checker: du må adde til link her </p>
+                        <img src="../Images/testing-with-nu html-checker.jpg" alt="Før Test for Contact Us">
+                    </div>
+                    <div class="test-box">
+                        <p>Google test</p>
+                        <img src="../Images/testing-with-google.jpg" alt="Etter Test for Contact Us">
+                    </div>
+                </div>
+            </div>
+        </div>
         </main>
 
         <!-- Footer: Contains additional information, links, and credits -->

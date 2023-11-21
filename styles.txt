@@ -49,13 +49,14 @@ header{
 }
 
 /* Styling for the navigation bar */
-nav{
+nav {
+  background-color: white; /* Setter hvit bakgrunn for nav */
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  grid-area: nav;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between; /* Spre elementene horisontalt */
+  align-items: center; /* Sentrere elementene vertikalt */
+  width: 100%; /* Sørger for at nav tar opp hele bredden */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Legger til en lett skygge for dybdeeffekt */
+  z-index: 1000; /* Sørger for at navigasjonsbaren legger seg over andre elementer */
 }
 
 /* Styling for the list in the navigation bar */
@@ -97,7 +98,6 @@ nav figure{
   object-fit: cover;
 }
 
-
 /* Special styling for the "contact us" link in the navigation bar */
 #contact-us{
   background-color: #312c2c;
@@ -124,11 +124,6 @@ nav figure{
 /* Skjuler standard checkbox, men den er fortsatt funksjonell */
 .menu-toggle {
   display: none;
-}
-
-.my-links {
-  display: flex; /* Gjør dette til en flex container */
-  align-items: center; /* Sentrerer elementene vertikalt */
 }
 
 /* Når checkboxen er merket, vis mobilmenyen */
@@ -166,26 +161,10 @@ nav figure{
   display: flex;
 }
 
-/* Skjermleser-only klasse */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 /* Styling for the main content section*/
 main{
   grid-area: main;
 }
-
-
 
 /* A flexible container for our articles or cards */
 .flex-container{

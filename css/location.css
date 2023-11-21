@@ -91,6 +91,19 @@ html {
     object-fit: cover;
   }
   
+/* Skjermleser-only klasse */
+.sr-only-menu {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
   /* ////////////////////////////////////////////// */
   
   /* MOBILE MENU */
@@ -417,7 +430,19 @@ html {
   footer a:hover {
     text-decoration: underline;
   }
-  
+ 
+  /* Skjermleser-only klasse */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} 
+
   /* MEDIA QUIERIES */
   @media only screen and (max-width: 768px) {
     nav{

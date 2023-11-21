@@ -22,40 +22,43 @@
 
 <body>
     <div id="grid-container">
-        <header>
-            <!-- Navigation bar: Contains links to other pages and interactive elements -->
-            <nav>
+        <!-- Navigation bar: Contains links to other pages and interactive elements -->
+        <nav>
+            <figure>
                 <!-- Logo: Represents the brand identity; links back to the homepage -->
                 <a href="../index.html">
                     <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
                 </a>
+            </figure>
 
-                <!-- Mobile menu toggle: Checkbox hack for a responsive menu button -->
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                <label for="menu-toggle" class="menu-button" aria-label="Open the menu">
-                    <span class="links"></span>
-                    <span class="links"></span>
-                    <span class="links"></span>
-                </label>
-                
-                <!-- Navigation links: List of links for site navigation -->
-                <div class="my-links">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="accessibility.html">Accessibility</a></li>
-                        <li><a href="topical.html">Topical</a></li>
-                        <li><a href="location.html">Location</a></li>
-                        <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
-                    </ul>
-                </div>
-                
-                 <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
-                 <a class="move-page-up" href="#" aria-label="Move Page Up">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-            </nav>
-        </header>
-
+            <!-- Checkbox for å veksle menyvisning -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-labelledby="menu-toggle-label" />
+            <!-- Label for å vise hamburgerikon og fungere som interaktivt element for checkbox -->
+            <label for="menu-toggle" class="menu-button">
+                <span class="links"></span>
+                <span class="links"></span>
+                <span class="links"></span>
+                <!-- Skjult label tekst for skjermlesere -->
+                <span id="menu-toggle-label" class="sr-only-menu">Open menu</span>
+            </label>
+            
+            <!-- Navigation links: List of links for site navigation -->
+            <div class="my-links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="topical.html">Topical</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
+                </ul>
+            </div>
+            
+                <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
+                <a class="move-page-up" href="#" aria-label="Move Page Up">
+                <i class="fa fa-arrow-circle-up"></i>
+            </a>
+        </nav>
+        
         <main>
             <div class="title-and-labels">
                 <h2 class="main-title">Steder i Pilestredet 35</h2>
@@ -139,7 +142,11 @@
 
         <footer>
             <input type="checkbox" id="footer-toggle" class="footer-toggle" />
-            <label for="footer-toggle" class="footer-toggle-label"><i class="fa-solid fa-address-book"></i></label>
+            <!-- Legg til skjermleservennlig tekst inni label som er skjult visuelt -->
+            <label for="footer-toggle" class="footer-toggle-label">
+                <i class="fa-solid fa-address-book"></i>
+                <span class="sr-only">Show contact information</span>
+            </label>
 
             <aside class="link-list footer-content">
                 <ul class="social-media-links">

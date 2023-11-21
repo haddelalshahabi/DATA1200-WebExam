@@ -37,139 +37,143 @@
 <body>
     <!-- Grid container: Main layout structure for the entire page -->
     <div id="grid-container">
-        <!-- Header: Top section of the webpage, includes navigation and branding -->
-        <header>
-            <!-- Navigation bar: Contains links to other pages and interactive elements -->
-            <nav>
-                <!-- Logo: Represents the brand identity; links back to the homepage -->
-                <a href="../index.html">
-                    <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
-                </a>
+      <!-- Navigation bar: Contains links to other pages and interactive elements -->
+      <nav>
+          <figure>
+              <!-- Logo: Represents the brand identity; links back to the homepage -->
+              <a href="../index.html">
+                  <img id="logo" src="../Images/logo.jpg" alt="Logo placeholder image">
+              </a>
+          </figure>
 
-                <!-- Mobile menu toggle: Checkbox hack for a responsive menu button -->
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                <label for="menu-toggle" class="menu-button" aria-label="Open the menu">
-                    <span class="links"></span>
-                    <span class="links"></span>
-                    <span class="links"></span>
-                </label>
-                
-                <!-- Navigation links: List of links for site navigation -->
-                <div class="my-links">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="accessibility.html">Accessibility</a></li>
-                        <li><a href="topical.html">Topical</a></li>
-                        <li><a href="location.html">Location</a></li>
-                        <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
-                    </ul>
-                </div>
-                
-                 <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
-                 <a class="move-page-up" href="#" aria-label="Move Page Up">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-            </nav>
+          <!-- Checkbox for å veksle menyvisning -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-labelledby="menu-toggle-label" />
+          <!-- Label for å vise hamburgerikon og fungere som interaktivt element for checkbox -->
+          <label for="menu-toggle" class="menu-button">
+              <span class="links"></span>
+              <span class="links"></span>
+              <span class="links"></span>
+              <!-- Skjult label tekst for skjermlesere -->
+              <span id="menu-toggle-label" class="sr-only">Open menu</span>
+          </label>
 
-            <!-- Header text: Main heading and introduction for the page -->
-            <div id="header-text">
-                <h1>Contact Information</h1>
-                <h3>Opening Hours</h3>
-                <p>Students and staff at OsloMet have access to the libraries in Pilestredet and at Kjeller from 06:00 to 22:00 (08:00 to 22:00). Use your card and code for access to the libraries outside of staffed hours. The public has access during staffed hours.</p>
-                <h3>Staffed hours – libraries in Pilestredet</h3>
-                <p>Monday–Thursday: 08:00–18:30</p>
-                <p>Friday: 08:00–15:30</p>
-              </div> 
-        </header>
+          <!-- Navigation links: List of links for site navigation -->
+          <div class="my-links">
+              <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="accessibility.html">Accessibility</a></li>
+                  <li><a href="topical.html">Topical</a></li>
+                  <li><a href="location.html">Location</a></li>
+                  <li><a id="contact-us" href="contact-us.html">Contact us</a></li>
+              </ul>
+          </div>
+          
+           <!-- Scroll-to-top button: Allows users to quickly navigate back to the top of the page -->
+           <a class="move-page-up" href="#" aria-label="Move Page Up">
+              <i class="fa fa-arrow-circle-up"></i>
+          </a>
+      </nav>
+
+      <header>
+          <!-- Header text: Main heading and introduction for the page -->
+          <div id="header-text">
+            <h1>Contact Information</h1>
+            <h3>Opening Hours</h3>
+            <p>Students and staff at OsloMet have access to the libraries in Pilestredet and at Kjeller from 06:00 to 22:00 (08:00 to 22:00). Use your card and code for access to the libraries outside of staffed hours. The public has access during staffed hours.</p>
+            <h3>Staffed hours – libraries in Pilestredet</h3>
+            <p>Monday–Thursday: 08:00–18:30</p>
+            <p>Friday: 08:00–15:30</p>
+          </div> 
+      </header>
     
-
-        <main>
-            <!-- Main content area of the page -->
-            <section class="flex-container">
-              <!-- Section title for contact information -->
-              <h2 id="h2-contact">Contact Information</h2>
+      <main>
+          <!-- Main content area of the page -->
+          <section class="flex-container">
+            <!-- Section title for contact information -->
+            <h2 id="h2-contact">Contact Information</h2>
+        
+            <!-- Contact form section -->
+            <section id="sec1-contact-us">
+              <!-- Contact form for user input -->
+              <form>
+                <!-- Input field for first name -->
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                <!-- Input field for last name -->
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+                <!-- Input field for email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="Your email..">
+              
+                <!-- Dropdown for selecting gender -->
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                </select>
+              
+                <!-- Textarea for additional subject information -->
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                <!-- Submit button for the form -->
+                <input type="submit" value="Submit">
+              </form>
+            </section>
           
-              <!-- Contact form section -->
-              <section id="sec1-contact-us">
-                <!-- Contact form for user input -->
-                <form>
-                  <!-- Input field for first name -->
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                
-                  <!-- Input field for last name -->
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          
-                  <!-- Input field for email -->
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="Email" placeholder="Your email..">
-                
-                  <!-- Dropdown for selecting gender -->
-                  <label for="gender">Gender</label>
-                  <select id="gender" name="gender">
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                    <option value="other">Other</option>
-                  </select>
-                
-                  <!-- Textarea for additional subject information -->
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                
-                  <!-- Submit button for the form -->
-                  <input type="submit" value="Submit">
-                </form>
+            <!-- Section for additional contact options -->
+            <section id="sec2-contact-us">
+              <!-- Contact option for email inquiries -->
+              <section>
+                <i style="font-size: 100px;" class="fa fa-regular fa-envelope"></i>
+                <p>Talk to one of our advisors</p>
+                <!-- Email address link -->
+                <p>Email Address <a href="mailto:info@oslomet.no">info@oslomet.no</a></p>
               </section>
-            
-              <!-- Section for additional contact options -->
-              <section id="sec2-contact-us">
-                <!-- Contact option for email inquiries -->
-                <section>
-                  <i style="font-size: 100px;" class="fa fa-regular fa-envelope"></i>
-                  <p>Talk to one of our advisors</p>
-                  <!-- Email address link -->
-                  <p>Email Address <a href="mailto:info@oslomet.no">info@oslomet.no</a></p>
-                </section>
-          
-                <!-- Contact option for telephone inquiries -->
-                <section>
-                  <i style= "font-size: 100px;" class="fa fa-regular fa-square-phone"></i>
-                  <p>You can call us if you have any questions</p>
-                  <!-- Telephone link -->
-                  <p>Phone Number: <a href="tel:22453220">22453220</a></p>
-                </section>
-          
-                <!-- Contact option for physical location visits -->
-                <section>
-                  <i style= "font-size: 100px;"  class="fa fa-solid fa-map-location-dot"></i>
-                  <p>You are welcome to visit us</p>
-                  <!-- Physical address link with embedded Google Maps location -->
-                  <p>Our Address: <a href="https://www.google.com/maps/place/OsloMet+-+Biblioteket+P35/@59.9195507,10.7327984,17z/data=!3m1!4b1!4m6!3m5!1s0x46416e7bfda9fef5:0x1999a7ebc1b332a3!8m2!3d59.919548!4d10.7353733!16s%2Fg%2F1tdbc_y1?entry=ttu">ELLEN GLEDITSCH'S HOUSE, Pilestredet 35, 0166 Oslo</a></p>
-                </section>
+        
+              <!-- Contact option for telephone inquiries -->
+              <section>
+                <i style= "font-size: 100px;" class="fa fa-regular fa-square-phone"></i>
+                <p>You can call us if you have any questions</p>
+                <!-- Telephone link -->
+                <p>Phone Number: <a href="tel:22453220">22453220</a></p>
               </section>
-            </section>
-          </main>        
+        
+              <!-- Contact option for physical location visits -->
+              <section>
+                <i style= "font-size: 100px;"  class="fa fa-solid fa-map-location-dot"></i>
+                <p>You are welcome to visit us</p>
+                <!-- Physical address link with embedded Google Maps location -->
+                <p>Our Address: <a href="https://www.google.com/maps/place/OsloMet+-+Biblioteket+P35/@59.9195507,10.7327984,17z/data=!3m1!4b1!4m6!3m5!1s0x46416e7bfda9fef5:0x1999a7ebc1b332a3!8m2!3d59.919548!4d10.7353733!16s%2Fg%2F1tdbc_y1?entry=ttu">ELLEN GLEDITSCH'S HOUSE, Pilestredet 35, 0166 Oslo</a></p>
+              </section>
 
-        <!-- Footer: Contains additional information, links, and credits -->
-        <footer>
-            <!-- Contact information: Displays various ways to contact the organization -->
-            <section class="contact-info">
-              <h3>Contact Information</h3>
-              <p>Email:<a href="mailto:info@oslomet.no"><i class="fa-solid fa-envelope"></i> info@oslomet.no</a></p>
             </section>
-          
-            <!-- Social media links: Encourages users to follow the organization on social platforms -->
-            <section class="social-media">
-              <h3>Follow Us</h3>
-              <p>Follow us on social media to stay updated: <a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>, <a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>.</p>
-            </section>
-          
-            <!-- Copyright: Legal statement regarding the ownership of the website's content -->
-            <section class="copyright">
-              <p>&copy; 2023 OsloMet - Storbyuniversitetet. All rights reserved.</p>
-            </section>
-        </footer>                 
+          </section>
+      </main>        
+
+      <!-- Footer: Contains additional information, links, and credits -->
+      <footer>
+          <!-- Contact information: Displays various ways to contact the organization -->
+          <section class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email:<a href="mailto:info@oslomet.no"><i class="fa-solid fa-envelope"></i> info@oslomet.no</a></p>
+          </section>
+        
+          <!-- Social media links: Encourages users to follow the organization on social platforms -->
+          <section class="social-media">
+            <h3>Follow Us</h3>
+            <p>Follow us on social media to stay updated: <a href="https://www.facebook.com/OsloMet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>, <a href="https://www.instagram.com/oslomet/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>.</p>
+          </section>
+        
+          <!-- Copyright: Legal statement regarding the ownership of the website's content -->
+          <section class="copyright">
+            <p>&copy; 2023 OsloMet - Storbyuniversitetet. All rights reserved.</p>
+          </section>
+      </footer>                 
     </div>
 </body>
 </html>
