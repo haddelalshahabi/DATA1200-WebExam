@@ -180,12 +180,12 @@ nav figure{
   white-space: nowrap;
 }
 
+
+ /* ////////////////////////////////////////////// */
 /* Styling for the main content section*/
 main{
   grid-area: main;
 }
-
-
 
 /* A flexible container for our articles or cards */
 .flex-container{
@@ -329,6 +329,7 @@ main{
   padding: 15px;
 }
 
+/* ////////////////////////////////////////////// */
 /* Styling for the topical slide */
 @keyframes gradientBackground {
   0% {
@@ -419,6 +420,7 @@ main{
   opacity: 1;
 }
 
+/* ////////////////////////////////////////////// */
 /* Styling for the accessibility slide */
 /* Stil for den fancy boksen */
 .fancy-box {
@@ -489,7 +491,7 @@ main{
     transition: transform 0.3s ease;
   }
   
-
+ /* ////////////////////////////////////////////// */
 /* Styling for the contact us slide */
 input[type=text], select, textarea, input[type=email] {
   width: 100%;
@@ -565,6 +567,7 @@ form{
   color: rgb(97, 95, 95);
 }
 
+/* ////////////////////////////////////////////// */
 /* Styling for the footer */
 footer {
   background-color: white;
@@ -621,6 +624,7 @@ footer h3 {
   font-size: 22px;
 }
 
+/* ////////////////////////////////////////////// */
 /* Media queries for responsive design */
 @media only screen and (max-width: 1418px) {
   .card{
