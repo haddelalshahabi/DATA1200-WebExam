@@ -1,6 +1,7 @@
 /* Resetting default margin to make sure our design looks consistent across browsers */
 body{
     margin: 0%;
+    overflow-x: hidden;
   }
   
   /* Ensuring smooth scrolling for anchor links */
@@ -185,40 +186,49 @@ body{
 #grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto; /* Sikrer at header, main, og footer har passende størrelser */
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     "nav"
     "header"
     "main"
     "footer";
-  min-height: 100vh; /* Sørger for at containeren er minst så høy som viewporten */
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .main-content-accessibility {
   grid-area: main;
-  overflow-y: auto;
+  /* Removed overflow-y to prevent unnecessary scrolling */
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f4f4f4;
-  width: 100%; /* Sørger for at main tar full bredde */
-  min-height: calc(100vh - (/* Header Høyde */ + /* Footer Høyde */)); /* Juster denne basert på den faktiske høyden til header og footer */
+  width: 100%;
+  /* Replace with the actual header and footer height */
+  
 }
 
 
+/* Responsive images within the main content */
+.main-content-accessibility img {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevents inline spacing */
+}
 
-/* Stil for hver seksjon - gir bedre struktur og visuell separasjon mellom seksjoner */
+
+/* Styling for each .fancy-box section */
 .fancy-box {
   background-color: #f7f9fa;
   border: 2px solid #d3d3d3;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 30px; /* Økt margin for å skille seksjoner */
-  width: 80%; /* Begrenser bredden for å unngå for bred layout */
-  max-width: 960px; /* Maksbredde for store skjermer */
-  transition: transform 0.3s ease;
+  margin: 0 auto 30px; /* Auto margins for horizontal centering, margin-bottom for spacing */
+  width: auto; /* Adjust width to be responsive */
+  max-width: 960px; /* Max width for larger screens */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 /* Hover-effekt for fancy box */
@@ -232,6 +242,13 @@ body{
   line-height: 1.6;
   color: #333; /* Mørk tekst for bedre lesbarhet */
 }
+
+/* Additional styling for images inside .test-box to limit their size */
+.test-box img {
+  max-width: 50%; /* Limits image width to 50% of its container (.test-box) */
+  height: auto; /* Keeps the aspect ratio of the image */
+}
+
 
 .fancy-box h1 {
   color: #030303;
@@ -343,6 +360,12 @@ footer {
     .fancy-box {
       width: calc(25% - 20px); /* Justering for 4 bokser per rad */
   }
+  }
+  @media only screen and (max-width: 960px) {
+    .fancy-box {
+    
+      max-width: 95%; /* Slightly less than 100% to allow for padding and margins */
+    }
   }
   
   @media only screen and (max-width: 959px) {
