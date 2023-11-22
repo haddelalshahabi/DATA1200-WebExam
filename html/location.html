@@ -21,8 +21,9 @@
 
 
 <body>
+    <!-- Grid Container: Main container for the layout, organizing content into a grid -->
     <div id="grid-container">
-        <!-- Navigation bar: Contains links to other pages and interactive elements -->
+        <!-- Navigation Bar -->
         <nav>
             <figure>
                 <!-- Logo: Represents the brand identity; links back to the homepage -->
@@ -31,14 +32,14 @@
                 </a>
             </figure>
 
-            <!-- Checkbox for å veksle menyvisning -->
+            <!-- Toggle Menu: Checkbox used to toggle the visibility of the mobile menu -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-labelledby="menu-toggle-label" />
-            <!-- Label for å vise hamburgerikon og fungere som interaktivt element for checkbox -->
+            <!-- Menu Button: Label acts as a clickable button for the menu toggle -->
             <label for="menu-toggle" class="menu-button">
                 <span class="links"></span>
                 <span class="links"></span>
                 <span class="links"></span>
-                <!-- Skjult label tekst for skjermlesere -->
+                <!-- Accessible Label: Hidden text for screen readers -->
                 <span id="menu-toggle-label" class="sr-only-menu">Open menu</span>
             </label>
             
@@ -59,68 +60,75 @@
             </a>
         </nav>
         
+        <!-- Main Content Area -->
         <main>
             <div class="title-and-labels">
                 <h2 class="main-title">Steder i Pilestredet 35</h2>
                 <div class="labels">
-                    <label for="slide1" class="nav-btn">Vår Beliggenhet i P35</label>
-                    <label for="slide2" class="nav-btn">Oslomet Kart</label>
-                    <label for="slide3" class="nav-btn">Kantinen i P35</label>
-                    <label for="slide4" class="nav-btn">Biblioteket i P35</label>
+                    <!-- Slide Navigation Buttons -->
+                    <label for="slide1" class="nav-btn">Our Location in P35</label>
+                    <label for="slide2" class="nav-btn">Oslomet cart</label>
+                    <label for="slide3" class="nav-btn">The canteen i P35</label>
+                    <label for="slide4" class="nav-btn">The library i P35</label>
                     <label for="slide5" class="nav-btn">Video</label>
                 </div>
             </div>
             
+            <!-- Image Gallery: Contains slides with different content -->
             <div class="image-gallery">
-                <!-- Radio Buttons for Slides -->
+                <!-- Radio Buttons for Slides: Controls which slide is visible -->
                 <input type="radio" name="slider" id="slide1" checked>
                 <input type="radio" name="slider" id="slide2">
                 <input type="radio" name="slider" id="slide3">
                 <input type="radio" name="slider" id="slide4">
                 <input type="radio" name="slider" id="slide5">
         
+                <!-- Slides: Each slide contains different content -->
                 <div class="slides">
+                    <!-- Slide 1 Content -->
                     <div class="slide s1">
-                        <!-- Content for slide 1 (Vår Beliggenhet i P35) -->
+                        <!-- Content for slide 1 (Our Location in P35) -->
                         <div class="text-content">
-                            <h2>Vår Beliggenhet i P35</h2>
+                            <!-- ...content... -->
+                            <h2>Our Location in P35</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
                             </p>
                         </div>
+                        <!-- Map Container for Slide 1 -->
                         <div class="map-container">
                         <iframe src="https://use.mazemap.com/embed.html#v=1&zlevel=1&center=10.735025,59.919369&zoom=18&sharepoitype=poi&sharepoi=562184&campusid=53&utm_medium=iframe" width="600" height="420" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" style=" border: '1px solid grey'; " allow="geolocation"></iframe><br/><small><a href="https://www.mazemap.com/">Map by MazeMap</a></small>        
                         </div>
                     </div>
                     <div class="slide s2">
-                        <!-- Content for slide 2 (Oslomet Kart) -->
+                        <!-- Content for slide 2 (Oslomet cart) -->
                         <div class="text-content">
-                            <h2>Steder i Pilestret på Kart</h2>
+                            <h2>Places in Pilestredet on the map</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
                             </p>
                         </div>
-                        <img src="../Images/home-location.jpg" alt="Bilde av kartet" />
+                        <img src="../Images/home-location.jpg" alt="Picture of the cart" />
                     </div>
                     <div class="slide s3">
-                        <!-- Content for slide 3 (Kantinen i P35) -->
+                        <!-- Content for slide 3 (The canteen in P35) -->
                         <div class="text-content">
-                            <h2>Kantinen</h2>
+                            <h2>The canteen</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
                             </p>
                         </div>
-                        <img src="../Images/P35-Olaf-Spiseri.jpg" alt="Bilde av kantinen" />
+                        <img src="../Images/P35-Olaf-Spiseri.jpg" alt="Picture of canteen" />
                     </div>
                     <div class="slide s4">
-                        <!-- Content for slide 4 (Biblioteket i P35) -->
+                        <!-- Content for slide 4 (The library in P35) -->
                         <div class="text-content">
-                            <h2>Biblioteket</h2>
+                            <h2>The library</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat itaque iste nam veniam? Ea voluptate sint vel molestiae repellendus voluptatibus voluptatum suscipit blanditiis dolorem fuga itaque, eum ratione assumenda totam.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellat nulla enim quod quas recusandae error qui labore tenetur odio numquam blanditiis distinctio, tempora nemo sed sapiente cum illo autem?
                             </p>
                         </div>
-                        <img src="../Images/home-topical.jpg" alt="Bilde av biblioteket" />
+                        <img src="../Images/home-topical.jpg" alt="Picture of the library" />
                     </div>
                     <div class="slide s5">
                         <!-- Content for slide 5 (Video) -->
@@ -140,9 +148,11 @@
             </div>
         </main>
 
+        <!-- Footer: Contains additional navigation and contact information -->
         <footer>
+            <!-- Footer Toggle: Checkbox for showing/hiding footer content -->
             <input type="checkbox" id="footer-toggle" class="footer-toggle" />
-            <!-- Legg til skjermleservennlig tekst inni label som er skjult visuelt -->
+            <!-- Footer Toggle Label: Acts as a button for the footer toggle --> 
             <label for="footer-toggle" class="footer-toggle-label">
                 <i class="fa-solid fa-address-book"></i>
                 <span class="sr-only">Show contact information</span>
