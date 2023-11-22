@@ -19,7 +19,6 @@ The website is built with HTML5 and CSS3. We strictly followed the project guide
 The project folder is organized as follows:
 
 - `css/` - Contains all the style sheets for the website.
-  - `accessibility.css` - Specific styles for the accessibility page.
   - `location.css` - Styles for the page that covers Pilestredet 35.
 
 - `html/` - Contains the HTML files for the website's content.
