@@ -1,7 +1,11 @@
+/* Smooth Scrolling */
+/* Enabling smooth scrolling for a better user experience */
 html {
     scroll-behavior: smooth;
   }
-  
+
+/* Body Styling */
+/* Resetting default margin and setting up the main background image */
   body {
     margin: 0;
     width: 100%;
@@ -9,7 +13,8 @@ html {
     background: url('../Images/Oslomet-Pilestredet-Dronebilde.jpg') no-repeat center center fixed;
     background-size: cover;
   }
-  
+
+/* Grid Layout */
   #grid-container {
     display: grid;
     grid-template-areas: 
@@ -19,11 +24,13 @@ html {
     grid-template-rows: auto 1fr auto auto;
     grid-template-columns: 100%;
   }
-  
+
+/* Universal Box Sizing */
   *, *:before, *:after {
     box-sizing: border-box;
   }
-  
+
+/* Header Styling */
   header{
     display: flex;
     flex-direction: column;
@@ -34,14 +41,16 @@ html {
     width: 100%;
     height: auto;
   }
-  
+
+/* Header Image Styling */
   header img {
     width: 100%;
     height: auto;
     max-height: 70vh;
   }
   
-  /* Styling for the navigation bar */
+
+/* Navigation Bar Styling */
   nav {
     background-color: white;
     display: flex;
@@ -52,7 +61,7 @@ html {
     z-index: 10;
   }
   
-  /* Styling for the list in the navigation bar */
+/* Navigation List Styling */
   nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -60,30 +69,32 @@ html {
     flex-direction: row;
   }
   
-  /* Removing default list style and adding spacing for list items in the navigation bar */
+ /* Navigation List Item Styling */
   nav ul li{
     list-style: none;
     display: inline-block;
   }
   
-  /* Styling for links in the navigation bar */
+/* Navigation Links Styling */
   nav ul li a{
     text-decoration: none;
     color: black;
     padding: 20px;
   }
   
-  /* Adding a hover effect to links in the navigation bar */
+/* Navigation Links Hover Effect */
   nav ul li a:hover{
     color: blue;
   }
   
-  /* Styling for the figure (logo) in the navigation bar */
+/* Navigation Logo Styling */
+/* Styling the logo within the navigation bar */
   nav figure{
     margin: 10px;
   }
   
-  /* Styling for the logo image */
+/* Logo Image Styling */
+/* Adjusting the size and fit of the logo image */
   #logo{
     width: 150px;
     height: 100%;
@@ -91,7 +102,8 @@ html {
     object-fit: cover;
   }
   
-/* Skjermleser-only klasse */
+/* Screen Reader-Only Class */
+/* Hiding elements from view but making them accessible to screen readers */
 .sr-only-menu {
   position: absolute;
   width: 1px;
@@ -104,16 +116,16 @@ html {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-  /* ////////////////////////////////////////////// */
-  
-  /* MOBILE MENU */
-  
-  /* Skjuler standard checkbox, men den er fortsatt funksjonell */
+
+/* ////////////////////////////////////////////// */  
+/* Mobile Menu */
+/* Hiding the standard checkbox, maintaining functionality for mobile menu */
   .menu-toggle {
     display: none;
   }
   
-  /* Når checkboxen er merket, vis mobilmenyen */
+/* Displaying the Mobile Menu When Checkbox is Checked */
+/* Styling the mobile menu when activated */
   #menu-toggle:checked + .my-links {
     display: flex;
     flex-direction: column;
@@ -121,16 +133,18 @@ html {
     width: 100%;
   }
   
-  /* Styling for de strekene i hamburgermenyen */
+/* Hamburger Menu Lines Styling */
+/* Designing the lines in the hamburger menu with a transition effect */
   .menu-button .links{
     height: 3px;
     width: 100%;
     background-color: black;
     border-radius: 3px;
-    transition: all 0.3s ease-in-out; /* Legger til en overgangseffekt */
+    transition: all 0.3s ease-in-out;
   }
   
-  /* Transformere burger til kryss */
+/* Transforming Hamburger to Cross */
+/* Animating the hamburger icon to a cross on activation */
   #menu-toggle:checked ~ .menu-button .links:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -142,13 +156,15 @@ html {
   #menu-toggle:checked ~ .menu-button .links:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
-  
-  /* Viser .my-links når #menu-toggle er merket */
+
+/* Displaying Mobile Links When Checkbox is Checked */
+/* Revealing the mobile menu upon checking the checkbox */
   #menu-toggle:checked ~ .my-links {
     display: flex;
   }
   
-  /* Styling for the mobile menu button */
+/* Mobile Menu Button Styling */
+/* Styling the button used for displaying the mobile menu */
   .menu-button{
     position: absolute;
     top: 2rem;
@@ -162,8 +178,9 @@ html {
     z-index: 100;
   }
   
-  /* ///////////////////////////////////////////////////////*/
-  
+/* ///////////////////////////////////////////////////////*/
+/* Contact Us Button Styling */
+/* Customizing the appearance of the 'contact us' button */
   #contact-us{
     background-color: #312c2c;
     color: rgba(255, 255, 255, 0.986);
@@ -171,7 +188,9 @@ html {
     padding: 10px;
     margin: 10px;
   }
-  
+
+/* 'Move Page Up' Button Styling */
+/* Styling for a button to quickly scroll to the top of the page */
   .move-page-up {
     position: fixed;
     width: 50px;
@@ -185,13 +204,17 @@ html {
     color: white;
     font-size: 22px;
   }
-  
+
+/* Main Content Styling */
+/* Setting up the main content area with padding and margin */
   main {
     grid-area: main;
     padding: 20px;
     margin: 0; 
   }
-  
+
+/* Title and Labels Styling */
+/* Designing the title and labels with background color and alignment */
   .title-and-labels {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -199,7 +222,9 @@ html {
     text-align: center;
     margin: 20px;
   }
-  
+
+/* Labels Container Styling */
+/* Setting up the container for labels with flexible layout and spacing */
   .labels {
     display: flex;
     flex-wrap: wrap;
@@ -207,7 +232,9 @@ html {
     gap: 10px;
     padding: 10px 0;
   }
-  
+
+/* Navigation Button Styling */
+/* Styling for navigation buttons with hover effects and transitions */
   .labels .nav-btn {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 5px 15px;
@@ -229,30 +256,39 @@ html {
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
   }
-  
+
+/* Hover Effect for Navigation Buttons */
   .nav-btn:hover {
     background-color: #ddd;
     transform: scale(1.1);
   }
-  
+
+/* Main Title Styling */
+/* Styling the main title with font size, weight, and shadow for emphasis */
   .main-title {
     font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   }
-  
+
+/* Image Gallery Styling */
+/* Setting up the layout and styling for the image gallery */
   .image-gallery {
     position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden;
   }
-  
+
+/* Image Gallery Slides Styling */
+/* Designing the slide container within the image gallery */
   .image-gallery input[type="radio"] {
     display: none;
   }
-  
+
+/* Image Gallery Slide Styling */
+/* Customizing the appearance of individual slides */
   .image-gallery .slides {
     display: flex;
     justify-content: space-between;
@@ -337,17 +373,23 @@ html {
   img, iframe {
     max-width: 100%;
   }
-  
+
+/* Footer Styling */
+/* Designing the footer with padding and background color */
   footer {
     padding: 20px;
     background-color: #f4f4f4;
     text-align: center;
   }
-  
+
+/* Footer Toggle Styling */
+/* Setting up the toggle functionality for the footer */
   .footer-toggle {
     display: none;
   }
-  
+
+/* Footer Toggle Label Styling */
+/* Styling the label for the footer toggle */
   .footer-toggle-label {
     display: block;
     position: fixed;
@@ -356,18 +398,24 @@ html {
     z-index: 1000;
     cursor: pointer;
   }
-  
+
+/* Footer Toggle Icon Styling */
+/* Styling the icon for the footer toggle, with a transition effect for color change */
   .footer-toggle-label i {
     font-size: 30px;
     color: #ff9100ee;
     transition: color 0.3s ease;
   }
-  
+
+/* Footer Content Display */
+/* Showing the footer content when the toggle is checked */
   .footer-toggle:checked ~ .footer-content {
     display: block;
     transform: translateY(0);
   }
-  
+
+/* Footer Content Styling */
+/* Initially hiding the footer content, with a transition for the transform property */
   .footer-content {
     display: none;
     position: fixed;
@@ -376,12 +424,10 @@ html {
     transform: translateY(100%);
   }
   
-  /* ////////////////////////////////////////// */
-  /* LINK SIDEBAR CSS  */
-  
-  /* Reference CodePen */
-  /* https://codepen.io/ggsingla/pen/MWOzxbq */
-  
+/* ////////////////////////////////////////// */
+/* LINK SIDEBAR CSS */
+/* Styling for the link sidebar inspired by a design on CodePen */
+/* Reference: https://codepen.io/ggsingla/pen/MWOzxbq */
   .link-list {
       position: fixed;
       left: 5em;
@@ -393,12 +439,16 @@ html {
       box-shadow: -4px 0px 0px orange;
       transition: all 300ms ease;
   }
-  
+
+/* Link Sidebar Hover Effect */
+/* Enhancing the box shadow and padding on hover */
   .link-list:hover {
     box-shadow: -8px 0px 20px orange;
       padding: 1em;
   }
-  
+
+/* Social Media Links Styling */
+/* Styling the social media links in the sidebar */
   .social-media-links {
     list-style: none;
     display: flex;
@@ -407,31 +457,43 @@ html {
     padding: 0;
     margin: 0;
   }
+
+/* Link Styling */
+/* Customizing the appearance of individual links */
   .link a {
     color: #111;
     font-size: 1.5rem;
     transition: all 200ms ease;
   }
+
+/* Visited Link Styling */
+/* Ensuring visited links maintain their color */
   .link a:visited {
     color: #111;
   }
+
+/* Link Hover Effect */
+/* Enhancing link size and color on hover */
   .link a:hover {
     color: orange;
     font-size: 1.75rem;
   }
-  
-  /* ////////////////////////////////////////// */
-  
+
+/* Footer Link Styling */
+/* Styling links in the footer for consistency */  
   footer a {
     color: black;
     text-decoration: none;
   }
-  
+
+/* Footer Link Hover Effect */
+/* Adding an underline effect on hover for footer links */
   footer a:hover {
     text-decoration: underline;
   }
- 
-  /* Skjermleser-only klasse */
+
+/* Screen Reader-Only Class */
+/* Styling for elements that are only for screen readers, making them invisible but accessible */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -443,99 +505,95 @@ html {
   border: 0;
 } 
 
-  /* MEDIA QUIERIES */
-  @media only screen and (max-width: 768px) {
-    nav{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .menu-button{
-      display: flex;
-    }
-    .nav-btn {
-      font-size: 0.8em;
-      padding: 3px 7px;
-    }
-    .main-title {
-      font-size: 2rem;
-    }
-    .title-and-labels {
-      margin: 10px;
-    }
-    .my-links{
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-    }
-    .my-links ul{
-        flex-direction: column;
-        width: 100%;
-    }
-    .my-links ul li{
-        text-align: center;
-        padding: 20px;
-        margin: 8px;
-        background-color: rgb(241, 241, 241);
-    }
-    .my-links ul li a{
-        padding: .5rem 1rem;
-    }
-  
-    .text-content p {
-      font-size: smaller;
-    }
-  
-    .image-gallery .slide {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .image-gallery .slide .text-content,
-    .image-gallery .slide img,
-    .image-gallery .slide figure {
-      order: 0;
-      padding-right: 0;
-      flex-basis: auto; 
-      max-width: 100%;
-    }
-    .image-gallery .slide img,
-    .image-gallery .slide figure {
-      margin-top: 20px;
-    }
+
+/* MEDIA QUERIES */
+/* This media query targets devices like tablets, adjusting the layout for navigation, menu buttons, and image gallery for a columnar and compact layout. */
+@media only screen and (max-width: 768px),
+      only screen and (max-width: 600px), 
+       only screen and (max-width: 510px), 
+       only screen and (max-width: 480px) {
+  /* Adjusting navigation bar for column layout */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  @media only screen and (max-width: 600px) {
-    nav ul li a {
-      padding: 15px;
-      font-size: larger;
-    }
-    nav ul {
-      display: none;
-    }
-    .text-content {
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-    .nav-btn {
-      font-size: 0.7em;
-      padding: 2px 5px;
-    }
+
+  /* Displaying the hamburger menu button */
+  .menu-button {
+    display: flex;
   }
-  
-  @media only screen and (max-width: 510px) {
-  
-  } 
-  
-  @media only screen and (max-width: 480px) {
-    .text-content {
-      padding: 8px;
-      font-size: 0.8rem;
-    }
-  
+
+  /* Adjusting the font size and padding of navigation buttons */
+  .nav-btn {
+    font-size: 0.8em;
+    padding: 3px 7px;
   }
-  
-  /* ////////////////////////////////////////// */
+
+  /* Reducing main title font size */
+  .main-title {
+    font-size: 2rem;
+  }
+
+  /* Adjusting margins for title and labels */
+  .title-and-labels {
+    margin: 10px;
+  }
+
+  /* Adjusting the mobile links layout */
+  .my-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+  }
+
+  /* Column layout for the links in mobile menu */
+  .my-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Center aligning the list items in mobile menu */
+  .my-links ul li {
+    text-align: center;
+    padding: 20px;
+    margin: 8px;
+    background-color: rgb(241, 241, 241);
+  }
+
+  /* Adjusting padding for links in mobile menu */
+  .my-links ul li a {
+    padding: .5rem 1rem;
+  }
+
+  /* Reducing text size for better readability */
+  .text-content p {
+    font-size: smaller;
+  }
+
+  /* Adjusting image gallery layout for smaller screens */
+  .image-gallery .slide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjusting content, image, and figure layout within the image gallery */
+  .image-gallery .slide .text-content,
+  .image-gallery .slide img,
+  .image-gallery .slide figure {
+    order: 0;
+    padding-right: 0;
+    flex-basis: auto;
+    max-width: 100%;
+  }
+
+  /* Adjusting margin for images and figures in the image gallery */
+  .image-gallery .slide img,
+  .image-gallery .slide figure {
+    margin-top: 20px;
+  }
+}
