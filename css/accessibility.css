@@ -220,15 +220,16 @@ body{
 
 /* Styling for each .fancy-box section */
 .fancy-box {
-  background-color: #f7f9fa;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background-color: #ffffff;
   border: 2px solid #d3d3d3;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 0 auto 30px; /* Auto margins for horizontal centering, margin-bottom for spacing */
-  width: auto; /* Adjust width to be responsive */
-  max-width: 960px; /* Max width for larger screens */
-  box-sizing: border-box; /* Include padding and border in width */
+  box-shadow: 2px 10px 10px -3px rgba(0, 0, 0, 0.9);
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px;
 }
 
 /* Hover-effekt for fancy box */
@@ -245,8 +246,9 @@ body{
 
 /* Additional styling for images inside .test-box to limit their size */
 .test-box img {
-  max-width: 50%; /* Limits image width to 50% of its container (.test-box) */
+  max-width: 40%; /* Limits image width to 50% of its container (.test-box) */
   height: auto; /* Keeps the aspect ratio of the image */
+  margin: 0 auto;
 }
 
 
